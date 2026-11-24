@@ -8,7 +8,7 @@ header{background:#101828;color:#fff;padding:22px 18px 16px}header h1{margin:0 0
 .pill b{display:block;font-size:13px}.pill span{color:#5a6b7f}
 .tabs{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 12px}
 .tab{border:1px solid #cdd5df;background:#fff;border-radius:20px;padding:7px 13px;font-size:13px;cursor:pointer}
-.tab.on{background:#101828;color:#fff;border-color:#101828}
+.tab.on{background:var(--c,#101828);color:#fff;border-color:var(--c,#101828)}
 .panel{display:none}.panel.on{display:block}
 .card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:14px;margin:0 0 12px}
 .card h2{margin:0 0 2px;font-size:18px}.card h2 small{color:#5a6b7f;font-weight:400;font-size:13px}
@@ -61,8 +61,68 @@ footer{color:#5a6b7f;font-size:12px;margin-top:22px}
 .chcard .golinks a{color:#0b5fff;text-decoration:none}.chcard .golinks a:hover{text-decoration:underline}
 .news{list-style:none;margin:0;padding:0}
 .news li{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:16px 18px;margin-bottom:14px;font-size:14.5px}
-</style></head><body>
-<header><div class="wrap"><h1>🎯 Análisis de canales — qué pegó y qué no</h1><p>23 nov 2026 · lectura nocturna ~21:00 CST · YouTube leído 21:12–21:16 · Lectura nocturna por CLI (IG / FB / Threads) · YouTube: lectura 21:12–21:16 · Por canal y por red: mejor, medio y peor, con qué le faltó, cómo se mejora y un texto nuevo por video</p></div></header>
+/* ---- Estadísticas v4: tipografía grande, aire, fotos, tablas ---- */
+body.stats .card{padding:22px;margin-bottom:22px}
+body.stats .card h2{font-size:21px}
+body.stats .card h3{font-size:17px}
+body.stats .strip{gap:10px;margin:18px 0}
+body.stats .pill{padding:12px 14px;font-size:13px}
+body.stats .tabs{gap:8px;margin:22px 0 18px}
+body.stats .tab{font-size:14px;padding:9px 16px;border-width:2px}
+body.stats .fbtns{margin:12px 0 6px}
+body.stats .fbtn{font-size:13.5px;padding:7px 13px}
+body.stats .net{padding:16px}
+body.stats .net h3{font-size:15px}
+body.stats .net .big{font-size:26px}
+body.stats .net .top{font-size:14px;line-height:1.45}
+body.stats .net .trend{font-size:13px}
+.chhead{display:flex;gap:16px;align-items:center}
+.avatar{width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid var(--c,#888);flex:none}
+.avatar-fb{width:72px;height:72px;border-radius:50%;background:var(--c,#888);color:#fff;display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:800;flex:none}
+.chhead .nm{font-size:22px;margin:0}
+.chhead .hd{color:#5a6b7f;font-size:13.5px;margin-top:2px}
+.chhead .vd{font-size:14.5px;margin-top:6px}
+.minitable{width:100%;border-collapse:collapse;margin-top:16px;font-size:14px}
+.minitable th{text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:.5px;color:#5a6b7f;padding:8px 10px;border-bottom:2px solid #e2e8f0}
+.minitable td{padding:11px 10px;border-bottom:1px solid #eef2f6;vertical-align:top;line-height:1.45}
+.minitable tr:last-child td{border-bottom:0}
+.minitable .vname{font-size:15px;font-weight:600}
+.minitable .num{font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap}
+.minitable .netname{font-weight:700;white-space:nowrap}
+.top-list{list-style:none;margin:14px 0 0;padding:0}
+.top-list li{display:flex;gap:10px;align-items:baseline;padding:10px 0;border-bottom:1px solid #eef2f6;font-size:15px;line-height:1.4}
+.top-list li:last-child{border-bottom:0}
+.top-list .rk{font-weight:800;color:var(--c,#888);width:24px;flex:none;font-size:15px}
+.top-list .nm{flex:1;font-weight:600}
+.top-list .vv{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.bullets{list-style:none;margin:10px 0 0;padding:0}
+.bullets li{padding:10px 2px;border-bottom:1px solid #eef2f6;font-size:14.5px;line-height:1.55}
+.bullets li:last-child{border-bottom:0}
+.bullets .who{font-weight:700}
+.chart-wrap{height:340px}
+/* ---- Modo oscuro / claro (interruptor en el header de las 3 páginas) ---- */
+header{position:relative}
+.theme-toggle{position:absolute;top:14px;right:16px;background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:20px;padding:7px 13px;font-size:13px;cursor:pointer;z-index:5}
+.theme-toggle:hover{background:rgba(255,255,255,.22)}
+html[data-theme="dark"] body{background:#0f172a;color:#e2e8f0}
+html[data-theme="dark"] header{background:#0b1220}
+html[data-theme="dark"] .card,html[data-theme="dark"] .net,html[data-theme="dark"] .pill,html[data-theme="dark"] .bigcard,html[data-theme="dark"] .chcard,html[data-theme="dark"] .news li{background:#1e293b;border-color:#334155;color:#e2e8f0}
+html[data-theme="dark"] .tab,html[data-theme="dark"] .fbtn,html[data-theme="dark"] .stab{background:#1e293b;border-color:#475569;color:#e2e8f0}
+html[data-theme="dark"] .tab.on{color:#fff}
+html[data-theme="dark"] .fbtn.on,html[data-theme="dark"] .stab.on{background:#e2e8f0;color:#0f172a;border-color:#e2e8f0}
+html[data-theme="dark"] .net .lab,html[data-theme="dark"] .note,html[data-theme="dark"] .card h2 small,html[data-theme="dark"] .chcard .handle,html[data-theme="dark"] .chcard .verdict,html[data-theme="dark"] .chcard .nums span,html[data-theme="dark"] .bigcard p,html[data-theme="dark"] .section .sub,html[data-theme="dark"] .chhead .hd,html[data-theme="dark"] footer,html[data-theme="dark"] .pill span,html[data-theme="dark"] header p,html[data-theme="dark"] .hstat span{color:#94a3b8}
+html[data-theme="dark"] .net .trend{color:#4ade80}
+html[data-theme="dark"] .bar-row .tr,html[data-theme="dark"] .prog .tr{background:#334155}
+html[data-theme="dark"] .minitable th{color:#94a3b8;border-color:#334155}
+html[data-theme="dark"] .minitable td{border-color:#1e293b}
+html[data-theme="dark"] .top-list li,html[data-theme="dark"] .bullets li{border-color:#1e293b}
+html[data-theme="dark"] .hook{background:#422006;border-color:#92400e;color:#fde68a}
+html[data-theme="dark"] .hook b{color:#fcd34d}
+html[data-theme="dark"] a{color:#7aa5ff}
+html[data-theme="dark"] .chcard .golinks a,html[data-theme="dark"] .bigcard .go{color:#7aa5ff}
+html[data-theme="dark"] .hstat{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18)}
+</style><script>try{var t=localStorage.getItem('theme');if(!t)t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}</script></head><body>
+<header><div class="wrap"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar entre modo claro y oscuro">🌙 Oscuro</button><h1>🎯 Análisis de canales — qué pegó y qué no</h1><p>23 nov 2026 · lectura nocturna ~21:00 CST · YouTube leído 21:12–21:16 · Lectura nocturna por CLI (IG / FB / Threads) · YouTube: lectura 21:12–21:16 · Por canal y por red: mejor, medio y peor, con qué le faltó, cómo se mejora y un texto nuevo por video</p></div></header>
 <div class="wrap"><div class="tabs"><button class="tab on" onclick="showTab('garra',this)">Garra Empresarial</button><button class="tab" onclick="showTab('instinto',this)">Instinto de Tigre</button><button class="tab" onclick="showTab('rugido',this)">El Rugido de la Fe</button><button class="tab" onclick="showTab('gta6mx',this)">Gta6mx</button><button class="tab" onclick="showTab('stickman',this)">Stickman Consciente</button><button class="tab" onclick="showTab('cuerpo',this)">El Cuerpo Habla</button><button class="tab" onclick="showTab('estadistica',this)">Garra Estadística</button><button class="tab" onclick="showTab('siriocode',this)">Sirio Code</button></div>
 
 <div class="panel on" id="panel-garra">
@@ -127,4 +187,8 @@ footer{color:#5a6b7f;font-size:12px;margin-top:22px}
 function showTab(id,btn){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('on'));document.getElementById('panel-'+id).classList.add('on');document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));btn.classList.add('on');if(window.__buildChart)window.__buildChart(id);}
 function showSub(ch,id,btn){var p=document.getElementById('panel-'+ch);p.querySelectorAll('.sub').forEach(s=>s.classList.remove('on'));p.querySelectorAll('#sub-'+ch+'-'+id)[0].classList.add('on');p.querySelectorAll('.stab').forEach(t=>t.classList.remove('on'));btn.classList.add('on');}
 document.addEventListener('DOMContentLoaded',function(){var h=(location.hash||'').slice(1);if(!h)return;var tabs=document.querySelectorAll('.tab');for(var i=0;i<tabs.length;i++){if((tabs[i].getAttribute('onclick')||'').indexOf("'"+h+"'")>=0){tabs[i].click();break;}}});
+
+function toggleTheme(){var h=document.documentElement;var t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);try{localStorage.setItem('theme',t);}catch(e){}syncThemeBtn();if(window.Chart){Chart.defaults.color=t==='dark'?'#cbd5e1':'#5a6b7f';Chart.defaults.borderColor=t==='dark'?'rgba(148,163,184,.25)':'rgba(0,0,0,.1)';}var on=document.querySelector('.panel.on');if(on&&window.__buildChart){window.__buildChart(on.id.replace('panel-',''));}}
+function syncThemeBtn(){var b=document.querySelector('.theme-toggle');if(b)b.textContent=document.documentElement.getAttribute('data-theme')==='dark'?'☀️ Claro':'🌙 Oscuro';}
+document.addEventListener('DOMContentLoaded',function(){syncThemeBtn();if(window.Chart&&document.documentElement.getAttribute('data-theme')==='dark'){Chart.defaults.color='#cbd5e1';Chart.defaults.borderColor='rgba(148,163,184,.25)';}});
 </script></body></html>

@@ -8,7 +8,7 @@ header{background:#101828;color:#fff;padding:22px 18px 16px}header h1{margin:0 0
 .pill b{display:block;font-size:13px}.pill span{color:#5a6b7f}
 .tabs{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 12px}
 .tab{border:1px solid #cdd5df;background:#fff;border-radius:20px;padding:7px 13px;font-size:13px;cursor:pointer}
-.tab.on{background:#101828;color:#fff;border-color:#101828}
+.tab.on{background:var(--c,#101828);color:#fff;border-color:var(--c,#101828)}
 .panel{display:none}.panel.on{display:block}
 .card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:14px;margin:0 0 12px}
 .card h2{margin:0 0 2px;font-size:18px}.card h2 small{color:#5a6b7f;font-weight:400;font-size:13px}
@@ -61,8 +61,68 @@ footer{color:#5a6b7f;font-size:12px;margin-top:22px}
 .chcard .golinks a{color:#0b5fff;text-decoration:none}.chcard .golinks a:hover{text-decoration:underline}
 .news{list-style:none;margin:0;padding:0}
 .news li{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:16px 18px;margin-bottom:14px;font-size:14.5px}
-</style></head><body>
-<header class="cover-head"><div class="wrap"><h1>📺 Canales de Julio — Estadísticas y Análisis</h1>
+/* ---- Estadísticas v4: tipografía grande, aire, fotos, tablas ---- */
+body.stats .card{padding:22px;margin-bottom:22px}
+body.stats .card h2{font-size:21px}
+body.stats .card h3{font-size:17px}
+body.stats .strip{gap:10px;margin:18px 0}
+body.stats .pill{padding:12px 14px;font-size:13px}
+body.stats .tabs{gap:8px;margin:22px 0 18px}
+body.stats .tab{font-size:14px;padding:9px 16px;border-width:2px}
+body.stats .fbtns{margin:12px 0 6px}
+body.stats .fbtn{font-size:13.5px;padding:7px 13px}
+body.stats .net{padding:16px}
+body.stats .net h3{font-size:15px}
+body.stats .net .big{font-size:26px}
+body.stats .net .top{font-size:14px;line-height:1.45}
+body.stats .net .trend{font-size:13px}
+.chhead{display:flex;gap:16px;align-items:center}
+.avatar{width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid var(--c,#888);flex:none}
+.avatar-fb{width:72px;height:72px;border-radius:50%;background:var(--c,#888);color:#fff;display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:800;flex:none}
+.chhead .nm{font-size:22px;margin:0}
+.chhead .hd{color:#5a6b7f;font-size:13.5px;margin-top:2px}
+.chhead .vd{font-size:14.5px;margin-top:6px}
+.minitable{width:100%;border-collapse:collapse;margin-top:16px;font-size:14px}
+.minitable th{text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:.5px;color:#5a6b7f;padding:8px 10px;border-bottom:2px solid #e2e8f0}
+.minitable td{padding:11px 10px;border-bottom:1px solid #eef2f6;vertical-align:top;line-height:1.45}
+.minitable tr:last-child td{border-bottom:0}
+.minitable .vname{font-size:15px;font-weight:600}
+.minitable .num{font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap}
+.minitable .netname{font-weight:700;white-space:nowrap}
+.top-list{list-style:none;margin:14px 0 0;padding:0}
+.top-list li{display:flex;gap:10px;align-items:baseline;padding:10px 0;border-bottom:1px solid #eef2f6;font-size:15px;line-height:1.4}
+.top-list li:last-child{border-bottom:0}
+.top-list .rk{font-weight:800;color:var(--c,#888);width:24px;flex:none;font-size:15px}
+.top-list .nm{flex:1;font-weight:600}
+.top-list .vv{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.bullets{list-style:none;margin:10px 0 0;padding:0}
+.bullets li{padding:10px 2px;border-bottom:1px solid #eef2f6;font-size:14.5px;line-height:1.55}
+.bullets li:last-child{border-bottom:0}
+.bullets .who{font-weight:700}
+.chart-wrap{height:340px}
+/* ---- Modo oscuro / claro (interruptor en el header de las 3 páginas) ---- */
+header{position:relative}
+.theme-toggle{position:absolute;top:14px;right:16px;background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:20px;padding:7px 13px;font-size:13px;cursor:pointer;z-index:5}
+.theme-toggle:hover{background:rgba(255,255,255,.22)}
+html[data-theme="dark"] body{background:#0f172a;color:#e2e8f0}
+html[data-theme="dark"] header{background:#0b1220}
+html[data-theme="dark"] .card,html[data-theme="dark"] .net,html[data-theme="dark"] .pill,html[data-theme="dark"] .bigcard,html[data-theme="dark"] .chcard,html[data-theme="dark"] .news li{background:#1e293b;border-color:#334155;color:#e2e8f0}
+html[data-theme="dark"] .tab,html[data-theme="dark"] .fbtn,html[data-theme="dark"] .stab{background:#1e293b;border-color:#475569;color:#e2e8f0}
+html[data-theme="dark"] .tab.on{color:#fff}
+html[data-theme="dark"] .fbtn.on,html[data-theme="dark"] .stab.on{background:#e2e8f0;color:#0f172a;border-color:#e2e8f0}
+html[data-theme="dark"] .net .lab,html[data-theme="dark"] .note,html[data-theme="dark"] .card h2 small,html[data-theme="dark"] .chcard .handle,html[data-theme="dark"] .chcard .verdict,html[data-theme="dark"] .chcard .nums span,html[data-theme="dark"] .bigcard p,html[data-theme="dark"] .section .sub,html[data-theme="dark"] .chhead .hd,html[data-theme="dark"] footer,html[data-theme="dark"] .pill span,html[data-theme="dark"] header p,html[data-theme="dark"] .hstat span{color:#94a3b8}
+html[data-theme="dark"] .net .trend{color:#4ade80}
+html[data-theme="dark"] .bar-row .tr,html[data-theme="dark"] .prog .tr{background:#334155}
+html[data-theme="dark"] .minitable th{color:#94a3b8;border-color:#334155}
+html[data-theme="dark"] .minitable td{border-color:#1e293b}
+html[data-theme="dark"] .top-list li,html[data-theme="dark"] .bullets li{border-color:#1e293b}
+html[data-theme="dark"] .hook{background:#422006;border-color:#92400e;color:#fde68a}
+html[data-theme="dark"] .hook b{color:#fcd34d}
+html[data-theme="dark"] a{color:#7aa5ff}
+html[data-theme="dark"] .chcard .golinks a,html[data-theme="dark"] .bigcard .go{color:#7aa5ff}
+html[data-theme="dark"] .hstat{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18)}
+</style><script>try{var t=localStorage.getItem('theme');if(!t)t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}</script></head><body>
+<header class="cover-head"><div class="wrap"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar entre modo claro y oscuro">🌙 Oscuro</button><h1>📺 Canales de Julio — Estadísticas y Análisis</h1>
 <p class="lede">El panel de los 8 canales de Julio en Instagram, Facebook, YouTube y Threads: qué está pasando con cada video, cuál pegó, cuál no, y qué se puede mejorar. Se actualiza dos veces al día, en la mañana y en la noche.</p>
 <div class="herostats">
 <div class="hstat"><b>8</b><span>canales</span></div>
@@ -79,61 +139,13 @@ footer{color:#5a6b7f;font-size:12px;margin-top:22px}
 <a class="bigcard" href="analisis.html"><h2>🎯 Análisis de canales</h2><p>Qué pegó y qué no, por canal y por red: mejor, medio y peor video con su análisis, qué le faltó, cómo se mejora y un texto-hook nuevo por video.</p><div class="go">Ver análisis →</div></a>
 </div></div>
 
-<div class="section"><h2>Los 8 canales</h2>
-<p class="sub">Pícale a un canal para ver sus números. Seguidores = suma de Instagram, Facebook y YouTube (donde hay dato). El video más viral es el de más vistas en cualquiera de las 4 redes.</p>
-<div class="chgrid"><div class="chcard" style="--c:#D4A017">
-<h3>Garra Empresarial</h3><div class="handle">@garraempresarial · 20 videos</div>
-<div class="nums"><div><b class="mono">79</b><span>Seguidores</span></div></div>
-<p class="top">🏆 <b>ep02 «3 trucos para empezar un negocio SIN DINERO»</b> · <b class="mono">6,677</b> vistas (Facebook)</p>
-<p class="verdict">➡️ Plana · ep10 sigue creciendo</p>
-<div class="golinks"><a href="estadisticas.html#garra">Ver estadísticas →</a> &nbsp;·&nbsp; <a href="analisis.html#garra">Ver análisis →</a></div>
-</div><div class="chcard" style="--c:#C0392B">
-<h3>Instinto de Tigre</h3><div class="handle">@instintodetigre · 25 videos</div>
-<div class="nums"><div><b class="mono">51</b><span>Seguidores</span></div></div>
-<p class="top">🏆 <b>¿Quieres caerle bien a alguien que no te soporta? No le hagas un favor. Pídele uno.</b> · <b class="mono">1,204</b> vistas (YouTube)</p>
-<p class="verdict">📈 Subiendo · pie 3D es el viral de la noche</p>
-<div class="golinks"><a href="estadisticas.html#instinto">Ver estadísticas →</a> &nbsp;·&nbsp; <a href="analisis.html#instinto">Ver análisis →</a></div>
-</div><div class="chcard" style="--c:#2E5FA3">
-<h3>El Rugido de la Fe</h3><div class="handle">@elrugidodelafe · 26 videos</div>
-<div class="nums"><div><b class="mono">119</b><span>Seguidores</span></div></div>
-<p class="top">🏆 <b>himno «El himno cristiano más famoso del mundo»</b> · <b class="mono">1,737</b> vistas (Instagram)</p>
-<p class="verdict">➡️ Plana · biblia-ep05 sigue creciendo</p>
-<div class="golinks"><a href="estadisticas.html#rugido">Ver estadísticas →</a> &nbsp;·&nbsp; <a href="analisis.html#rugido">Ver análisis →</a></div>
-</div><div class="chcard" style="--c:#7D3C98">
-<h3>Gta6mx</h3><div class="handle">@gta6mxoficial · 30 videos</div>
-<div class="nums"><div><b class="mono">19</b><span>Seguidores</span></div></div>
-<p class="top">🏆 <b>Rubius encuentra a la mujer del tráiler en GTA 6</b> · <b class="mono">2,819</b> vistas (YouTube)</p>
-<p class="verdict">📈 Subiendo · «No lo mires fijo» +283</p>
-<div class="golinks"><a href="estadisticas.html#gta6mx">Ver estadísticas →</a> &nbsp;·&nbsp; <a href="analisis.html#gta6mx">Ver análisis →</a></div>
-</div><div class="chcard" style="--c:#1A1A1A">
-<h3>Stickman Consciente</h3><div class="handle">@stickmanconsciente · 10 videos</div>
-<div class="nums"><div><b class="mono">29</b><span>Seguidores</span></div></div>
-<p class="top">🏆 <b>Lo perfecto espera… pero lo constante llega</b> · <b class="mono">7,333</b> vistas (YouTube)</p>
-<p class="verdict">➡️ Plano en IG · en YT su ep01 es el video más viral (7,333)</p>
-<div class="golinks"><a href="estadisticas.html#stickman">Ver estadísticas →</a> &nbsp;·&nbsp; <a href="analisis.html#stickman">Ver análisis →</a></div>
-</div><div class="chcard" style="--c:#0E7C7B">
-<h3>El Cuerpo Habla</h3><div class="handle">@el.cuerpo_habla · 7 videos</div>
-<div class="nums"><div><b class="mono">470</b><span>Seguidores</span></div></div>
-<p class="top">🏆 <b>gasometría «Gasometría arterial en 4 pasos»</b> · <b class="mono">73,945</b> vistas (Instagram)</p>
-<p class="verdict">📈📈 Viral · gasometría no para (+19,511)</p>
-<div class="golinks"><a href="estadisticas.html#cuerpo">Ver estadísticas →</a> &nbsp;·&nbsp; <a href="analisis.html#cuerpo">Ver análisis →</a></div>
-</div><div class="chcard" style="--c:#2E86C1">
-<h3>Garra Estadística</h3><div class="handle">@garraestadistica · 2 videos</div>
-<div class="nums"><div><b class="mono">11</b><span>Seguidores</span></div></div>
-<p class="top">🏆 <b>ep01 «Un dado no tiene nada de normal»</b> · <b class="mono">1,265</b> vistas (Instagram)</p>
-<p class="verdict">➡️ Plano · faltan más videos</p>
-<div class="golinks"><a href="estadisticas.html#estadistica">Ver estadísticas →</a> &nbsp;·&nbsp; <a href="analisis.html#estadistica">Ver análisis →</a></div>
-</div><div class="chcard" style="--c:#0B5345">
-<h3>Sirio Code</h3><div class="handle">@siriocode · 2 videos</div>
-<div class="nums"><div><b class="mono">1</b><span>Seguidores</span></div></div>
-<p class="top">🏆 <b>ep02 «Doctor: si tu paciente de las 5 no llegó OTRA VEZ»</b> · <b class="mono">254</b> vistas (Facebook)</p>
-<p class="verdict">🆕 Primer día · Facebook ya supera a Instagram</p>
-<div class="golinks"><a href="estadisticas.html#siriocode">Ver estadísticas →</a> &nbsp;·&nbsp; <a href="analisis.html#siriocode">Ver análisis →</a></div>
-</div></div></div>
-
 <div class="section"><h2>📰 Novedades — la noche del 23 nov</h2>
 <p class="sub">Lo que se movió hoy, con los números de la lectura nocturna (~21:00 CST; YouTube leído 21:12–21:16).</p>
 <ul class="news"><li>🔥 <b>El Cuerpo Habla — gasometría imparable:</b> 73,945 vistas en IG (+19,511 hoy), 3,265 likes, 2,966 saves, 934 shares… y +102 seguidores (358 → 460). El mayor salto del día en los 8 canales.</li><li>🚪 <b>Instinto de Tigre — pie-en-la-puerta 3D, viral de la noche:</b> FB 366 (+112) e IG 140 (+28) en un día. La versión 3D ya supera en Facebook a casi todo el catálogo viejo.</li><li>📈 <b>Gta6mx — «No lo mires fijo» sigue creciendo:</b> 1,432 vistas en IG (+283): el video viejo con más crecimiento del día en todos los canales.</li><li>🎥 <b>YouTube — Stickman ep01 es el más visto de todos:</b> «Lo perfecto espera… pero lo constante llega»: 7,333 vistas en 28 días. Ningún otro video de los 8 canales llega a eso en YouTube.</li><li>🆕 <b>Sirio Code — primer día:</b> Facebook 457 vistas ya supera a Instagram (18). Primer seguidor en Facebook. El video que más jala es el del doctor y el paciente que no llega (254).</li><li>📖 <b>El Rugido de la Fe — biblia-ep05 sigue creciendo:</b> IG 164 (+24): el video nuevo con más crecimiento de la noche en Instagram. El molde «la Biblia NO lo dice» sigue siendo el motor.</li></ul></div>
 
 <footer>Datos frescos del dossier v3 (23 nov 2026, noche). YouTube leído 21:12–21:16 (Studio). «Sin dato» = el dato no existe o no se pudo leer; nada inventado. GitHub Pages: islas-kryga.github.io</footer>
-</div></body></html>
+</div><script>
+function toggleTheme(){var h=document.documentElement;var t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);try{localStorage.setItem('theme',t);}catch(e){}syncThemeBtn();if(window.Chart){Chart.defaults.color=t==='dark'?'#cbd5e1':'#5a6b7f';Chart.defaults.borderColor=t==='dark'?'rgba(148,163,184,.25)':'rgba(0,0,0,.1)';}var on=document.querySelector('.panel.on');if(on&&window.__buildChart){window.__buildChart(on.id.replace('panel-',''));}}
+function syncThemeBtn(){var b=document.querySelector('.theme-toggle');if(b)b.textContent=document.documentElement.getAttribute('data-theme')==='dark'?'☀️ Claro':'🌙 Oscuro';}
+document.addEventListener('DOMContentLoaded',function(){syncThemeBtn();if(window.Chart&&document.documentElement.getAttribute('data-theme')==='dark'){Chart.defaults.color='#cbd5e1';Chart.defaults.borderColor='rgba(148,163,184,.25)';}});
+</script></body></html>
