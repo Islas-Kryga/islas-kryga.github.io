@@ -1,0 +1,505 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Monetización — cuánto paga cada red · 23 nov 2026 · lectura nocturna ~21:00 CST · YouTube leído 21:12–21:16</title><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script><style>
+*{box-sizing:border-box}body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;margin:0;background:#f4f6f8;color:#1c2430;line-height:1.45}
+header{background:#101828;color:#fff;padding:22px 18px 16px}header h1{margin:0 0 4px;font-size:22px}header p{margin:0;color:#c3cede;font-size:13px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 14px 40px}
+.strip{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.pill{background:#fff;border:1px solid #dfe4ea;border-left:4px solid var(--c,#888);border-radius:8px;padding:8px 10px;font-size:12px;min-width:150px;flex:1}
+.pill b{display:block;font-size:13px}.pill span{color:#5a6b7f}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 12px}
+.tab{border:1px solid #cdd5df;background:#fff;border-radius:20px;padding:7px 13px;font-size:13px;cursor:pointer;white-space:nowrap}
+.tab.on{background:var(--c,#101828);color:#fff;border-color:var(--c,#101828)}
+.panel{display:none}.panel.on{display:block}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:14px;margin:0 0 12px}
+.card h2{margin:0 0 2px;font-size:18px}.card h2 small{color:#5a6b7f;font-weight:400;font-size:13px}
+.nets{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin:12px 0}
+.net{border:1px solid #e2e8f0;border-top:4px solid var(--c,#888);border-radius:10px;padding:10px 12px;background:#fff}
+.net h3{margin:0 0 4px;font-size:14px}.net .big{font-size:22px;font-weight:700}.net .lab{font-size:11px;color:#5a6b7f;text-transform:uppercase;letter-spacing:.4px}
+.net .top{font-size:12.5px;margin-top:6px}.net .trend{font-size:12px;color:#0b7a45;font-weight:600}
+.net .nodata{color:#8a97a8;font-size:13px}
+.fbtns{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}
+.fbtn{border:1px solid #cdd5df;background:#eef2f6;border-radius:16px;padding:5px 11px;font-size:12.5px;cursor:pointer;white-space:nowrap}
+.fbtn.on{background:var(--ncl,var(--nc,#101828));color:#fff;border-color:var(--ncl,var(--nc,#101828))}
+.bar-row{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:13px}
+.bar-row .lbl{width:210px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar-row .tr{flex:1;background:#e9eef3;border-radius:6px;height:18px;overflow:hidden}
+.bar-row .fl{height:100%;background:var(--c,#2E86C1);background:linear-gradient(90deg,var(--c,#2E86C1),color-mix(in srgb,var(--c,#2E86C1) 55%,#fff));border-radius:10px}
+.bar-row .val{width:70px;text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.mono{font-variant-numeric:tabular-nums}
+.prog{margin:8px 0}.prog .pl{display:flex;justify-content:space-between;font-size:12.5px}.prog .tr{height:10px;background:#e9eef3;border-radius:6px;overflow:hidden}.prog .fl{height:100%;background:#16a34a}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:640px){.two{grid-template-columns:1fr}.bar-row .lbl{width:130px}}
+.good{border-left:4px solid #16a34a}.bad{border-left:4px solid #dc2626}.mid{border-left:4px solid #d97706}
+.hook{background:#fef9c3;border:1px dashed #d97706;border-radius:8px;padding:8px 10px;font-size:13px;margin-top:8px}
+.hook b{color:#92400e}
+.tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;color:#fff;margin-bottom:6px}
+.subtabs{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.stab{border:1px solid #cdd5df;background:#fff;border-radius:16px;padding:5px 12px;font-size:12.5px;cursor:pointer;white-space:nowrap}
+.stab.on{background:var(--ncl,var(--nc,#101828));color:#fff;border-color:var(--ncl,var(--nc,#101828))}
+.sub{display:none}.sub.on{display:block}
+.note{font-size:12px;color:#5a6b7f}
+.hero{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+@media(max-width:640px){.hero{grid-template-columns:1fr}}
+.bigcard{display:block;background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:22px;text-decoration:none;color:inherit}
+.bigcard:hover{border-color:#101828}
+.bigcard h2{margin:0 0 6px;font-size:20px}.bigcard p{margin:0;color:#5a6b7f;font-size:14px}
+.bigcard .go{margin-top:12px;font-weight:700;color:#0b5fff}
+footer{color:#5a6b7f;font-size:12px;margin-top:22px}
+.cover-head{padding:38px 18px 30px}.cover-head h1{font-size:28px}.cover-head .lede{font-size:15px;max-width:760px}
+.herostats{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.hstat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:10px;padding:10px 16px}
+.hstat b{display:block;font-size:21px}.hstat span{font-size:12px;color:#c3cede}
+.section{margin-top:56px}.section h2{font-size:23px;margin:0 0 6px}.section .sub{color:#5a6b7f;margin:0 0 20px;font-size:14.5px}
+.bigcard{padding:28px}.bigcard h2{font-size:22px}
+.chgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.chcard{display:block;background:#fff;border:1px solid #e2e8f0;border-top:5px solid var(--c,#888);border-radius:14px;padding:18px;text-decoration:none;color:inherit}
+.chcard:hover{border-color:#101828}
+.chcard h3{margin:0;font-size:17px}.chcard .handle{color:#5a6b7f;font-size:12.5px}
+.chcard .nums{display:flex;gap:18px;margin:14px 0 10px}.chcard .nums b{font-size:20px;display:block}.chcard .nums span{font-size:11px;color:#5a6b7f;text-transform:uppercase;letter-spacing:.4px}
+.chcard .top{font-size:13.5px;margin:0}.chcard .verdict{font-size:13px;color:#5a6b7f;margin:8px 0 0}
+.chcard .golinks{margin-top:14px;font-size:13px;font-weight:700;color:#0b5fff}
+.chcard .golinks a{color:#0b5fff;text-decoration:none}.chcard .golinks a:hover{text-decoration:underline}
+.news{list-style:none;margin:0;padding:0}
+.news li{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:16px 18px;margin-bottom:14px;font-size:14.5px}
+/* ---- Estadísticas v4: tipografía grande, aire, fotos, tablas ---- */
+body.stats .card{padding:22px;margin-bottom:22px}
+body.stats .card h2{font-size:21px}
+body.stats .card h3{font-size:17px}
+body.stats .strip{gap:10px;margin:18px 0}
+body.stats .pill{padding:12px 14px;font-size:13px}
+body.stats .tabs{gap:8px;margin:22px 0 18px}
+body.stats .tab{font-size:14px;padding:9px 16px;border-width:2px}
+body.stats .fbtns{margin:12px 0 6px}
+body.stats .fbtn{font-size:13.5px;padding:7px 13px}
+body.stats .net{padding:16px}
+body.stats .net h3{font-size:15px}
+body.stats .net .big{font-size:26px}
+body.stats .net .top{font-size:14px;line-height:1.45}
+body.stats .net .trend{font-size:13px}
+.chhead{display:flex;gap:16px;align-items:center}
+.avatar{width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid var(--c,#888);flex:none}
+.avatar-fb{width:72px;height:72px;border-radius:50%;background:var(--c,#888);color:#fff;display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:800;flex:none}
+.chhead .nm{font-size:22px;margin:0}
+.chhead .hd{color:#5a6b7f;font-size:13.5px;margin-top:2px}
+.chhead .vd{font-size:14.5px;margin-top:6px}
+.minitable{width:100%;border-collapse:collapse;margin-top:16px;font-size:14px}
+.minitable th{text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:.5px;color:#5a6b7f;padding:8px 10px;border-bottom:2px solid #e2e8f0}
+.minitable td{padding:11px 10px;border-bottom:1px solid #eef2f6;vertical-align:top;line-height:1.45}
+.minitable tr:last-child td{border-bottom:0}
+.minitable .vname{font-size:15px;font-weight:600}
+.minitable .num{font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap}
+.minitable .netname{font-weight:700;white-space:nowrap}
+.top-list{list-style:none;margin:14px 0 0;padding:0}
+.top-list li{display:flex;gap:10px;align-items:baseline;padding:10px 0;border-bottom:1px solid #eef2f6;font-size:15px;line-height:1.4}
+.top-list li:last-child{border-bottom:0}
+.top-list .rk{font-weight:800;color:var(--c,#888);width:24px;flex:none;font-size:15px}
+.top-list .nm{flex:1;font-weight:600}
+.top-list .vv{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.bullets{list-style:none;margin:10px 0 0;padding:0}
+.bullets li{padding:10px 2px;border-bottom:1px solid #eef2f6;font-size:14.5px;line-height:1.55}
+.bullets li:last-child{border-bottom:0}
+.bullets .who{font-weight:700}
+.chart-wrap{height:340px}
+/* ---- Modo oscuro / claro (interruptor en el header de las 3 páginas) ---- */
+header{position:relative}
+.theme-toggle{position:absolute;top:14px;right:16px;background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:20px;padding:7px 13px;font-size:13px;cursor:pointer;z-index:5}
+.theme-toggle:hover{background:rgba(255,255,255,.22)}
+html[data-theme="dark"] body{background:#0f172a;color:#e2e8f0}
+html[data-theme="dark"] header{background:#0b1220}
+html[data-theme="dark"] .card,html[data-theme="dark"] .net,html[data-theme="dark"] .pill,html[data-theme="dark"] .bigcard,html[data-theme="dark"] .chcard,html[data-theme="dark"] .news li{background:#1e293b;border-color:#334155;color:#e2e8f0}
+html[data-theme="dark"] .tab,html[data-theme="dark"] .fbtn,html[data-theme="dark"] .stab{background:#1e293b;border-color:#475569;color:#e2e8f0}
+html[data-theme="dark"] .tab.on{color:#fff}
+html[data-theme="dark"] .fbtn.on,html[data-theme="dark"] .stab.on{background:#e2e8f0;color:#0f172a;border-color:#e2e8f0}
+html[data-theme="dark"] .net .lab,html[data-theme="dark"] .note,html[data-theme="dark"] .card h2 small,html[data-theme="dark"] .chcard .handle,html[data-theme="dark"] .chcard .verdict,html[data-theme="dark"] .chcard .nums span,html[data-theme="dark"] .bigcard p,html[data-theme="dark"] .section .sub,html[data-theme="dark"] .chhead .hd,html[data-theme="dark"] footer,html[data-theme="dark"] .pill span,html[data-theme="dark"] header p,html[data-theme="dark"] .hstat span{color:#94a3b8}
+html[data-theme="dark"] .net .trend{color:#4ade80}
+html[data-theme="dark"] .bar-row .tr,html[data-theme="dark"] .prog .tr{background:#334155}
+html[data-theme="dark"] .minitable th{color:#94a3b8;border-color:#334155}
+html[data-theme="dark"] .minitable td{border-color:#1e293b}
+html[data-theme="dark"] .top-list li,html[data-theme="dark"] .bullets li{border-color:#1e293b}
+html[data-theme="dark"] .hook{background:#422006;border-color:#92400e;color:#fde68a}
+html[data-theme="dark"] .hook b{color:#fcd34d}
+html[data-theme="dark"] a{color:#7aa5ff}
+html[data-theme="dark"] .chcard .golinks a,html[data-theme="dark"] .bigcard .go{color:#7aa5ff}
+html[data-theme="dark"] .hstat{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18)}
+/* ---- Tira compacta de canales (portada) ---- */
+.chanstrip{display:grid;grid-template-columns:repeat(8,1fr);gap:12px;margin-top:6px}
+.chanmini{display:flex;flex-direction:column;align-items:center;gap:7px;text-decoration:none;color:inherit;text-align:center}
+.chanmini img{width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid var(--c,#888);flex:none}
+.chanmini .mini-av-fb{width:56px;height:56px;border-radius:50%;background:var(--c,#888);color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;border:2px solid var(--c,#888);flex:none}
+.chanmini span{font-size:12px;font-weight:600;line-height:1.25}
+.chanmini:hover span{text-decoration:underline}
+@media(max-width:760px){.chanstrip{grid-template-columns:repeat(4,1fr);gap:14px 8px}}
+/* ---- Análisis v2: misma tipografía/espaciado que Estadísticas v4 ---- */
+body.analisis .card{padding:22px;margin-bottom:22px}
+body.analisis .card h2{font-size:21px}
+body.analisis .card h3{font-size:17px}
+body.analisis .tabs{gap:8px;margin:22px 0 18px}
+body.analisis .tab{font-size:14px;padding:9px 16px;border-width:2px}
+body.analisis .subtabs{margin:14px 0}
+body.analisis .stab{font-size:13.5px;padding:7px 13px}
+body.analisis .net{padding:16px}
+body.analisis .net h3{font-size:15px}
+body.analisis .net p{font-size:14px;line-height:1.55;margin:8px 0 0}
+body.analisis .card p{font-size:14.5px;line-height:1.55}
+/* ---- Portada del video en cada tarjeta ---- */
+.vcard{display:flex;gap:16px;align-items:flex-start}
+.vcover{width:120px;flex:none;border-radius:10px;border:1px solid #e2e8f0;display:block}
+.vcover-fb{width:120px;flex:none;min-height:200px;border-radius:10px;background:var(--c,#888);color:#fff;display:flex;align-items:center;justify-content:center;padding:10px;font-size:12.5px;font-weight:700;text-align:center;line-height:1.35}
+.vbody{flex:1;min-width:0}
+@media(max-width:640px){.vcover,.vcover-fb{width:84px}.vcover-fb{min-height:150px;font-size:11px}}
+html[data-theme="dark"] .vcover{border-color:#334155}
+/* ---- Chips de canal (foto + dónde pega) en "Por red" ---- */
+.chiprow{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.chip{display:flex;align-items:center;gap:9px;border:1px solid #e2e8f0;border-radius:20px;padding:5px 13px 5px 5px;font-size:13px;background:#fff}
+.chip img{width:32px;height:32px;border-radius:50%;object-fit:cover;border:2px solid var(--c,#888);flex:none}
+.chip .mini-av-fb{width:32px;height:32px;border-radius:50%;background:var(--c,#888);color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;border:2px solid var(--c,#888);flex:none}
+.chip b{font-weight:700}
+.chip span{color:#5a6b7f}
+html[data-theme="dark"] .chip{background:#1e293b;border-color:#334155}
+html[data-theme="dark"] .chip span{color:#94a3b8}
+/* ---- Glosario como lista bonita ---- */
+.gloss{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:14px}
+.gloss-item{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px;font-size:14px;line-height:1.5}
+.gloss-item b{display:block;font-size:14.5px;margin-bottom:2px}
+html[data-theme="dark"] .gloss-item{background:#0f172a;border-color:#334155}
+.warn{background:#fef2f2;border:1px solid #fecaca;border-radius:10px;padding:12px 14px;font-size:14px;line-height:1.55;margin-top:12px}
+html[data-theme="dark"] .warn{background:#450a0a;border-color:#7f1d1d}
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.minitable{min-width:540px}
+.avatar-lg{width:96px;height:96px}
+.avatar-fb.avatar-lg{font-size:44px}
+.chhead-lg{display:flex;gap:18px;align-items:center}
+.chhead-lg .nm{font-size:26px;margin:0}
+.chhead-lg .verdict{font-size:15px;margin-top:4px}
+.tab .tav{width:26px;height:26px;border-radius:50%;object-fit:cover;vertical-align:-7px;margin-right:6px;border:2px solid var(--c)}
+.tab .tav-fb{width:26px;height:26px;border-radius:50%;background:var(--c);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;vertical-align:-7px;margin-right:6px;border:2px solid var(--c)}
+.stab svg{vertical-align:-2px;margin-right:5px}
+.viral-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
+.viral{border:1px solid #e2e8f0;border-top:4px solid var(--c);border-radius:10px;padding:10px;background:#fff}
+.viral .vn{font-size:12.5px;font-weight:700;margin-top:6px;line-height:1.35}
+.viral .vv{font-size:15px;font-weight:800}
+.viral .vthumb,.viral .vthumb-fb{width:100%;height:96px;object-fit:cover}
+.viral .vthumb-fb{height:96px;font-size:11.5px}
+.vthumb{width:64px;flex:none;border-radius:8px;border:1px solid #e2e8f0;display:block}
+.vthumb-fb{width:64px;flex:none;min-height:100px;border-radius:8px;background:var(--c);color:#fff;display:flex;align-items:center;justify-content:center;padding:6px;font-size:11px;font-weight:700;text-align:center;line-height:1.3}
+.trend-up{color:#0b7a45;font-weight:700;white-space:nowrap}
+.trend-down{color:#dc2626;font-weight:700;white-space:nowrap}
+.trend-flat{color:#5a6b7f;font-weight:700;white-space:nowrap}
+html[data-theme="dark"] .trend-up{color:#4ade80}
+html[data-theme="dark"] .trend-down{color:#f87171}
+html[data-theme="dark"] .trend-flat{color:#94a3b8}
+.vps{font-size:13px;color:#0b7a45;font-weight:700;white-space:nowrap}
+html[data-theme="dark"] .vps{color:#4ade80}
+.grow-list{margin:10px 0 0;padding:0;list-style:none;font-size:14.5px;line-height:1.7}
+.grow-list b{font-weight:700}
+.evo-wrap{height:220px;margin-top:10px}
+.evo-btns{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.sim-controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:14px 0}
+.sim-slider{flex:1;min-width:220px;accent-color:#0f172a}
+.sim-btn{border:1px solid #cdd5df;background:#eef2f6;border-radius:16px;padding:6px 12px;font-size:13px;cursor:pointer}
+.sim-btn.on{background:#101828;color:#fff;border-color:#101828}
+.sim-read{font-size:16px;font-weight:800}
+.sim-chart-wrap{height:280px}
+.sim-range{font-size:13.5px;line-height:1.7}
+.sim-ex{margin-top:10px;font-size:14px;line-height:1.7}
+.recipe-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:14px}
+.recipe{border:1px solid #e2e8f0;border-top:4px solid var(--c);border-radius:12px;padding:14px;background:#fff}
+.recipe h3{margin:0 0 2px;font-size:16px}
+.recipe .q{font-size:13.5px;color:#5a6b7f;margin:0 0 8px}
+.recipe ol{margin:8px 0;padding-left:18px;font-size:14px;line-height:1.55}
+.recipe .ej{background:#f8fafc;border-radius:8px;padding:10px;font-size:13.5px;line-height:1.5;margin-top:10px}
+.rank-row{display:grid;grid-template-columns:210px 1fr 1fr 1.5fr;gap:12px;align-items:start;padding:14px 4px;border-bottom:1px solid #eef2f6;font-size:14px;line-height:1.5}
+.rank-who{display:flex;gap:10px;align-items:center}
+.rank-who img{width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid var(--c)}
+.rank-who .mini-av-fb{width:40px;height:40px;border-radius:50%;background:var(--c);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;border:2px solid var(--c);flex:none}
+.rank-row .lab{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#5a6b7f;font-weight:700}
+.rank-row .big{font-weight:800;font-size:15px}
+.prox{border:1px solid #e2e8f0;border-left:5px solid var(--c);border-radius:12px;padding:16px;background:#fff}
+.prox h3{margin:0 0 6px;font-size:16px;display:flex;gap:8px;align-items:center}
+.prox h3 img{width:32px;height:32px;border-radius:50%;object-fit:cover;border:2px solid var(--c)}
+.prox h3 .mini-av-fb{width:32px;height:32px;border-radius:50%;background:var(--c);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;border:2px solid var(--c);flex:none}
+.prox .row{display:flex;gap:8px;font-size:14.5px;padding:7px 0;border-bottom:1px solid #eef2f6;line-height:1.5}
+.prox .row:last-child{border:0}
+.prox .k{width:135px;flex:none;font-weight:700}
+.nohagas{background:#fef2f2;border:1px solid #fecaca;border-radius:12px;padding:16px;font-size:14.5px;line-height:1.6}
+.nohagas h3{margin:0 0 6px;font-size:16px}
+.cal-row{display:grid;grid-template-columns:70px 1fr 90px;gap:10px;padding:10px 4px;border-bottom:1px solid #eef2f6;font-size:14.5px;align-items:center;line-height:1.45}
+.cal-row .day{font-weight:800}
+.cal-row .hr{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.goal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:12px}
+.goal-card{border:1px solid #e2e8f0;border-radius:10px;padding:12px;background:#fff}
+.goal-card h4{margin:0 0 8px;font-size:14.5px}
+.goal-card .gline{font-size:12.5px;margin-top:6px}
+.goal-card .gline b{float:right}
+/* Dark mode CON COLORES: mismos colores de canal y de red, fondos oscuros con acento */
+html[data-theme="dark"] header{background:linear-gradient(135deg,#0b1220 0%,#101a30 55%,#241a4d 100%)}
+html[data-theme="dark"] .viral{background:#1e293b;border-color:#334155}
+html[data-theme="dark"] .recipe{background:#1e293b;border-color:#334155}
+html[data-theme="dark"] .recipe .q{color:#94a3b8}
+html[data-theme="dark"] .recipe .ej{background:#0f172a}
+html[data-theme="dark"] .rank-row{border-color:#1e293b}
+html[data-theme="dark"] .rank-row .lab{color:#94a3b8}
+html[data-theme="dark"] .prox{background:#1e293b;border-color:#334155}
+html[data-theme="dark"] .prox .row{border-color:#334155}
+html[data-theme="dark"] .nohagas{background:#2a1718;border-color:#7f1d1d}
+html[data-theme="dark"] .cal-row{border-color:#1e293b}
+html[data-theme="dark"] .goal-card{background:#1e293b;border-color:#334155}
+html[data-theme="dark"] .sim-btn{background:#1e293b;border-color:#475569;color:#e2e8f0}
+html[data-theme="dark"] .sim-btn.on{background:#38bdf8;color:#0f172a;border-color:#38bdf8}
+html[data-theme="dark"] .fbtn.on,html[data-theme="dark"] .stab.on{background:var(--nc,#38bdf8);color:#fff;border-color:var(--nc,#38bdf8)}
+html[data-theme="dark"] .tab.on{box-shadow:0 0 0 2px var(--c)}
+html[data-theme="dark"] .avatar{border-color:var(--c)}
+html[data-theme="dark"] .net{border-top-color:var(--c)}
+html[data-theme="dark"] .pill{border-left-color:var(--c)}
+/* Responsive: teléfono ~390, iPad ~820, escritorio ~1280 */
+@media(max-width:820px){
+.chhead .nm{font-size:20px}.chart-wrap{height:300px}
+.rank-row{grid-template-columns:150px 1fr 1fr 1.2fr}
+}
+@media(max-width:640px){
+header h1{font-size:20px}.cover-head h1{font-size:24px}
+.theme-toggle{top:10px;right:10px;padding:6px 10px;font-size:12px}
+.minitable{font-size:13px}.minitable th,.minitable td{padding:8px 6px}
+.avatar{width:56px;height:56px;font-size:26px}.avatar-lg{width:72px;height:72px;font-size:34px}
+.chhead-lg{gap:12px}.chhead-lg .nm{font-size:21px}
+.viral-grid{grid-template-columns:repeat(2,1fr)}
+.rank-row{grid-template-columns:1fr;gap:6px;padding:12px 2px}
+.sim-chart-wrap{height:260px}.evo-wrap{height:200px}
+.tab{font-size:13px;padding:8px 12px}.tab .tav,.tab .tav-fb{width:22px;height:22px}
+.prox .k{width:110px}.cal-row{grid-template-columns:64px 1fr 70px;font-size:13.5px}
+}
+/* ---- v4: carruseles, selector de canales, modal, tira de días ---- */
+.carousel{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:4px 16px 10px 2px;scrollbar-width:none}
+.carousel>*{scroll-snap-align:start;flex:0 0 300px}
+.carousel::after{content:'';flex:0 0 4px}
+.carousel::-webkit-scrollbar{display:none}
+.car-wrap{position:relative}
+.car-nav{position:absolute;top:38%;z-index:3;width:34px;height:34px;border-radius:50%;border:1px solid #cdd5df;background:#fff;color:#1c2430;font-size:18px;font-weight:800;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);display:flex;align-items:center;justify-content:center}
+.car-nav.prev{left:-6px}.car-nav.next{right:-6px}
+.chan-nav{flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 16px 8px 2px;scrollbar-width:none}
+.chan-nav::after{content:'';flex:0 0 6px}
+.chan-nav::-webkit-scrollbar{display:none}
+.chan-nav .tab{flex:none;scroll-snap-align:start;white-space:nowrap}
+.chan-nav .tab.on{box-shadow:0 0 0 2px var(--c)}
+.daycard{border:1px solid #e2e8f0;border-top:5px solid var(--c,#888);border-radius:12px;padding:12px;background:#fff;cursor:pointer;text-align:left;width:100%}
+.daycard:hover{border-color:#101828}
+.daycard .dch{display:flex;gap:8px;align-items:center;font-weight:700;font-size:13.5px}
+.daycard .dch img{width:28px;height:28px;border-radius:50%;object-fit:cover;border:2px solid var(--c)}
+.daycard .dch .mini-av-fb{width:28px;height:28px;border-radius:50%;background:var(--c);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;border:2px solid var(--c)}
+.daycard .dt{font-size:13.5px;font-weight:600;margin:8px 0 2px;line-height:1.35}
+.daycard .dh{font-size:12.5px;color:#5a6b7f;font-weight:700}
+.daycard .dthumb{width:100%;height:110px;object-fit:cover;border-radius:8px;margin:8px 0 0}
+.daycard .dthumb-fb{width:100%;height:110px;border-radius:8px;background:var(--c);color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800;margin:8px 0 0}
+.daystrip{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;align-items:start}
+.daycol h3{margin:0 0 8px;font-size:15px;text-align:center}
+.daycol .daycard{margin-bottom:10px}
+.v4card{border:1px solid #e2e8f0;border-radius:12px;padding:14px;background:#fff;cursor:pointer}
+.v4card:hover{border-color:#101828}
+.v4card h4{margin:6px 0 2px;font-size:14.5px;line-height:1.35}
+.v4card .vv{font-size:13px;color:#5a6b7f}
+.v4card .one{font-size:13.5px;line-height:1.45;margin:6px 0 0}
+.v4card .one b{color:#0b7a45}
+.v4card .fix{font-size:13.5px;line-height:1.45;margin:4px 0 0}
+.v4card .fix b{color:#b45309}
+.v4card .vthumb,.v4card .vthumb-fb{width:100%;height:120px;min-height:120px;object-fit:cover}
+.v4card .vcover{width:100%;height:150px;object-fit:cover}
+.v4card .vcover-fb{width:100%;height:150px;min-height:150px}
+.sumcard{border:1px solid #e2e8f0;border-top:5px solid var(--c,#888);border-radius:12px;padding:12px;background:#fff;cursor:pointer}
+.sumcard:hover{border-color:#101828}
+.sumcard .sch{display:flex;gap:9px;align-items:center}
+.sumcard .sch img{width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid var(--c)}
+.sumcard .sch .mini-av-fb{width:38px;height:38px;border-radius:50%;background:var(--c);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:17px;font-weight:800;border:2px solid var(--c)}
+.sumcard .sn{font-weight:700;font-size:14px}
+.sumcard .sv{font-size:13px;margin-top:6px;line-height:1.4}
+.sumcard .sd{font-size:13px;font-weight:700;margin-top:4px}
+.sumcard .sf{font-size:12.5px;color:#5a6b7f;margin-top:2px}
+.modal-overlay{position:fixed;inset:0;background:rgba(15,23,42,.65);z-index:100;display:none;align-items:flex-start;justify-content:center;padding:24px 12px;overflow-y:auto}
+.modal-overlay.open{display:flex}
+.modal-panel{background:#fff;color:#1c2430;border-radius:16px;max-width:640px;width:100%;padding:22px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.modal-close{position:absolute;top:10px;right:12px;border:1px solid #cdd5df;background:#eef2f6;border-radius:50%;width:32px;height:32px;font-size:16px;cursor:pointer}
+.modal-panel h2{margin:0 0 4px;font-size:20px}
+.modal-panel .mrow{display:flex;gap:10px;align-items:center;margin:10px 0}
+.modal-panel .mrow img{width:56px;height:56px;border-radius:50%;object-fit:cover;border:3px solid var(--c,#888)}
+.modal-panel .mrow .mini-av-fb{width:56px;height:56px;border-radius:50%;background:var(--c,#888);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;border:3px solid var(--c,#888)}
+.modal-panel .mchart{height:200px;margin-top:8px}
+.modal-panel .mcover{width:100%;max-height:300px;object-fit:cover;border-radius:10px;margin:10px 0}
+.modal-panel .mlab{font-size:11.5px;text-transform:uppercase;letter-spacing:.5px;color:#5a6b7f;font-weight:700;margin-top:14px}
+.modal-panel p{font-size:14.5px;line-height:1.55;margin:6px 0}
+.modal-panel .mtable{width:100%;border-collapse:collapse;font-size:14px;margin-top:8px}
+.modal-panel .mtable td,.modal-panel .mtable th{padding:8px 6px;border-bottom:1px solid #eef2f6;text-align:left;vertical-align:top}
+.pay-table{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:12px}
+.pay-table th{text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:.5px;color:#5a6b7f;padding:8px 10px;border-bottom:2px solid #e2e8f0}
+.pay-table td{padding:12px 10px;border-bottom:1px solid #eef2f6;vertical-align:middle;line-height:1.4}
+.pay-table tr:last-child td{border-bottom:0}
+.pay-table .pay-net{display:flex;gap:9px;align-items:center;font-weight:700;white-space:nowrap}
+.pay-table .pay-net svg{flex:none}
+.pay-table .pay{font-weight:800;font-size:16px;white-space:nowrap;color:var(--nc,#1c2430)}
+.pay-table .cond{font-size:13px;color:#5a6b7f}
+.sim-rows{margin-top:12px}
+.sim-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #eef2f6;font-size:14px}
+.sim-row:last-child{border-bottom:0}
+.sim-row .snet{display:flex;gap:8px;align-items:center;width:170px;flex:none;font-weight:700}
+.sim-row .snet svg{flex:none}
+.sim-row .samt{margin-left:auto;font-weight:800;white-space:nowrap;font-variant-numeric:tabular-nums}
+.sim-row .sbar{flex:1;height:12px;background:#e9eef3;border-radius:6px;overflow:hidden}
+.sim-row .sfill{height:100%;border-radius:6px}
+@media(max-width:820px){.daystrip{grid-template-columns:repeat(3,1fr)}.carousel>*{flex-basis:270px}}
+@media(max-width:640px){
+.daystrip{grid-template-columns:repeat(2,1fr)}
+.carousel>*{flex-basis:250px}
+.car-nav{display:none}
+.sim-row .snet{width:130px}
+.modal-panel{padding:16px}
+}
+/* ---- Contraste botones de red/canal (v4): nunca negro ilegible ---- */
+.tab.on[style*="#1A1A1A"]{background:#4b5563;border-color:#4b5563}
+.tag[style*="#1A1A1A"]{background:#4b5563}
+.fbtn,.stab{font-weight:600}
+.fbtn.on,.stab.on{color:#fff;font-weight:700}
+html[data-theme="dark"] .fbtn.on,html[data-theme="dark"] .stab.on{background:var(--nc,#38bdf8);color:#fff;border-color:var(--nc,#38bdf8)}
+html[data-theme="dark"] .car-nav{background:#1e293b;border-color:#475569;color:#e2e8f0}
+html[data-theme="dark"] .daycard,html[data-theme="dark"] .v4card,html[data-theme="dark"] .sumcard,html[data-theme="dark"] .modal-panel{background:#1e293b;border-color:#334155;color:#e2e8f0}
+html[data-theme="dark"] .daycard .dh,html[data-theme="dark"] .v4card .vv,html[data-theme="dark"] .sumcard .sf{color:#94a3b8}
+html[data-theme="dark"] .modal-panel .mlab{color:#94a3b8}
+html[data-theme="dark"] .modal-panel .mtable td,html[data-theme="dark"] .modal-panel .mtable th{border-color:#334155}
+html[data-theme="dark"] .modal-close{background:#0f172a;border-color:#475569;color:#e2e8f0}
+html[data-theme="dark"] .pay-table th{color:#94a3b8;border-color:#334155}
+html[data-theme="dark"] .pay-table td{border-color:#1e293b}
+html[data-theme="dark"] .pay-table .cond{color:#94a3b8}
+html[data-theme="dark"] .sim-row{border-color:#1e293b}
+html[data-theme="dark"] .sim-row .sbar{background:#334155}
+/* ---- Fase 2: navegación entre páginas, tarjetas por red, calendario real ---- */
+.pagenav{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}
+.pagenav a{display:inline-block;border:1px solid #cdd5df;background:#fff;border-radius:20px;padding:7px 14px;font-size:13.5px;font-weight:600;text-decoration:none;color:#1c2430}
+.pagenav a:hover{border-color:#101828}
+.pagenav a.on{background:#101828;color:#fff;border-color:#101828}
+html[data-theme="dark"] .pagenav a{background:#1e293b;border-color:#475569;color:#e2e8f0}
+html[data-theme="dark"] .pagenav a.on{background:#e2e8f0;color:#0f172a;border-color:#e2e8f0}
+body.monet .card{padding:22px;margin-bottom:22px}
+body.monet .card h2{font-size:21px}
+.netcard .neth{display:flex;gap:8px;align-items:center;font-weight:800;font-size:15px}
+.netcard .neth svg{flex:none}
+.netcard .nsec{border-top:1px solid #eef2f6;margin-top:10px;padding-top:10px;cursor:pointer}
+.netcard .nsec.top{border-top:0;margin-top:6px;padding-top:0}
+.netcard .nsec h4{margin:4px 0 2px}
+.netcard .nsec .vv{font-size:13px;color:#5a6b7f}
+.netcard .why{font-size:13.5px;line-height:1.45;margin:6px 0 0}
+.netcard .why b{color:#0b7a45}
+.netcard .why.fix b{color:#b45309}
+.netcard .vthumb,.netcard .vthumb-fb{width:100%;height:110px;min-height:110px;object-fit:cover}
+.dhead{text-align:center;border:1px solid #e2e8f0;border-radius:12px;padding:8px 4px;background:#fff;margin-bottom:10px}
+.dhead b{display:block;font-size:24px;line-height:1}
+.dhead span{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#5a6b7f}
+.dhead.today{border:2px solid #d97706;background:#fef9c3}
+.dhead.today b{color:#92400e}
+html[data-theme="dark"] .dhead{background:#1e293b;border-color:#334155}
+html[data-theme="dark"] .dhead span{color:#94a3b8}
+html[data-theme="dark"] .dhead.today{background:#422006;border-color:#d97706}
+html[data-theme="dark"] .netcard .nsec{border-color:#334155}
+html[data-theme="dark"] .netcard .nsec .vv{color:#94a3b8}
+.monlink{display:block;text-decoration:none;color:inherit}
+@media(max-width:820px){.hero{grid-template-columns:1fr}}
+</style><script>try{var t=localStorage.getItem('theme');if(!t)t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}</script></head><body class="monet">
+<header><div class="wrap"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar entre modo claro y oscuro">🌙 Oscuro</button><h1>💰 Monetización — cuánto paga cada red y cuánto falta para cobrar</h1><p>23 nov 2026 · lectura nocturna ~21:00 CST · YouTube leído 21:12–21:16 · Todo en dólares (USD). Hoy los Shorts pagan centavos: el dinero está en llegar a YPP y en los largos de 8+ minutos.</p></div></header>
+<div class="wrap"><nav class="pagenav"><a href="index.html">🏠 Portada</a><a href="estadisticas.html">📊 Estadísticas</a><a href="analisis.html">🎯 Análisis</a><a href="monetizacion.html" class="on">💰 Monetización</a></nav>
+<div class="card"><h2>💵 Esta red paga por esto</h2>
+<p style="margin:4px 0 0">Lo que paga cada red por cada 1,000 vistas. Instagram y Threads no pagan por vistas: ahí el valor son los seguidores y las ventas.</p>
+<div class="tscroll"><table class="pay-table"><tr><th>Red</th><th>Pago</th><th>Condición</th></tr><tr style="--nc:#FF0000"><td><span class="pay-net" style="color:#FF0000"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor"/><path d="M10 9.5v5l4.5-2.5z" fill="#fff"/></svg>YouTube largo (8+ min)</span></td><td><span class="pay">$1–$6 USD</span><br><span class="note">por 1,000 vistas</span></td><td class="cond">Anuncios intermedios (mid-roll); hay que llegar a YPP</td></tr><tr style="--nc:#FF0000"><td><span class="pay-net" style="color:#FF0000"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor"/><path d="M10 9.5v5l4.5-2.5z" fill="#fff"/></svg>YouTube Shorts</span></td><td><span class="pay">$0.01–$0.07 USD</span><br><span class="note">por 1,000 vistas</span></td><td class="cond">Solo volumen: miles de vistas para centavos</td></tr><tr style="--nc:#1877F2"><td><span class="pay-net" style="color:#1877F2"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8V11H8v3h2.5v7h3z" fill="currentColor"/></svg>Facebook Reels</span></td><td><span class="pay">$0.02–$0.20 USD</span><br><span class="note">por 1,000 vistas</span></td><td class="cond">Paga más por vista que Shorts; Content Monetization es por invitación</td></tr><tr style="--nc:#E1306C"><td><span class="pay-net" style="color:#E1306C"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg>Instagram</span></td><td><span class="pay">~$0 USD</span><br><span class="note">por 1,000 vistas</span></td><td class="cond">Sin programa de pago por vistas: vale por seguidores y ventas</td></tr><tr style="--nc:#6b7280"><td><span class="pay-net" style="color:#6b7280"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M12 6.5A5.5 5.5 0 1 0 17.5 12 5.5 5.5 0 0 0 12 6.5zm0 9A3.5 3.5 0 1 1 15.5 12 3.5 3.5 0 0 1 12 15.5z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M17.5 12v3.5a2 2 0 0 0 4 0" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Threads</span></td><td><span class="pay">$0 USD</span><br><span class="note">por 1,000 vistas</span></td><td class="cond">Sin monetización</td></tr></table></div></div>
+<div class="card"><h2>🎛️ Simulador: ¿cuánto pagaría con X vistas?</h2>
+<p style="margin:4px 0 0">Mueve el deslizador: cada red muestra su rango en dólares.</p><div class="sim-controls"><span class="sim-read" id="sim-views">100,000 vistas</span><input id="sim-slider" class="sim-slider" type="range" min="3" max="6" step="0.05" value="5" oninput="simUpdate()"><button class="sim-btn" onclick="simPreset(1000,this)">1,000</button><button class="sim-btn" onclick="simPreset(10000,this)">10,000</button><button class="sim-btn on" onclick="simPreset(100000,this)">100,000</button><button class="sim-btn" onclick="simPreset(1000000,this)">1,000,000</button></div><div class="sim-chart-wrap"><canvas id="sim-chart"></canvas></div><div id="sim-fb"></div><div class="sim-rows" id="sim-rows"></div><p class="sim-range" id="sim-range"></p><h3 style="margin:14px 0 4px">Ejemplos reales (USD)</h3><div class="car-wrap"><div class="carousel" id="car-simex"><div class="v4card" style="--c:#D4A017"><h4>Stickman ep01 «Lo perfecto espera…»</h4><p class="one">YouTube Shorts · 7,333 vistas</p><p class="one"><b>$0.07–$0.51 USD</b></p></div><div class="v4card" style="--c:#D4A017"><h4>gasometría</h4><p class="one">Instagram · 73,945 vistas</p><p class="one"><b>$0 — IG no paga por vistas USD</b></p></div><div class="v4card" style="--c:#D4A017"><h4>Garra ep02 «3 trucos para empezar SIN DINERO»</h4><p class="one">Facebook Reels · 6,677 vistas</p><p class="one"><b>$0.13–$1.34 USD</b></p></div><div class="v4card" style="--c:#D4A017"><h4>Gta6mx tráiler</h4><p class="one">YouTube Shorts · 2,819 vistas</p><p class="one"><b>$0.03–$0.20 USD</b></p></div><div class="v4card" style="--c:#D4A017"><h4>gasometría, si fuera un largo de YouTube</h4><p class="one">YouTube largo · 73,945 vistas</p><p class="one"><b>$74–$444 USD</b></p></div></div><button class="car-nav prev" onclick="carScroll('car-simex',-1)" aria-label="Anterior">‹</button><button class="car-nav next" onclick="carScroll('car-simex',1)" aria-label="Siguiente">›</button></div></div>
+<div class="card"><h2>🎯 Metas — cuánto falta para cobrar</h2>
+<p style="margin:4px 0 0">Al llegar a YPP, un largo de 100,000 vistas pagaría $100–$600 USD; 100 Shorts de 7,333 vistas, $7–$51 USD. Desde el 1 feb 2027 YPP cambia a 8,000 h o 20M Shorts.</p><div class="goal-grid"><div class="goal-card" style="--c:#D4A017"><h4>💼 Garra Empresarial</h4><div class="gline">YouTube · subs (meta 1,000) <b>16 / 1,000</b></div><div class="prog" style="margin-top:2px"><div class="tr"><div class="fl" style="width:1.6%"></div></div></div><div class="gline">YouTube · horas 28d (meta 4,000 h) <b>37.5 / 4,000</b></div><div class="prog" style="margin-top:2px"><div class="tr"><div class="fl" style="width:0.9%"></div></div></div><div class="gline">Facebook · seguidores (Stars: 500) <b>50 / 500</b></div><div class="prog" style="margin-top:2px"><div class="tr"><div class="fl" style="width:10.0%"></div></div></div></div><div class="goal-card" style="--c:#C0392B"><h4>🐅 Instinto de Tigre</h4><div class="gline">YouTube · subs (meta 1,000) <b>18 / 1,000</b></div><div class="prog" style="margin-top:2px"><div class="tr"><div class="fl" style="width:1.8%"></div></div></div><div class="gline">YouTube · horas 28d (meta 4,000 h) <b>78.8 / 4,000</b></div><div class="prog" style="margin-top:2px"><div class="tr"><div class="fl" style="width:2.0%"></div></div></div><div class="gline">Facebook · seguidores (Stars: 500) <b>17 / 500</b></div><div class="prog" style="margin-top:2px"><div class="tr"><div class="fl" style="width:3.4%"></div></div></div></div><div class="goal-card" style="--c:#2E5FA3"><h4>🙏 El Rugido de la Fe</h4><div class="gline">YouTube · subs (meta 1,000) <b>43 / 1,000</b></div><div class="prog" style="margin-top:2px"><div class="tr"><div class="fl" style="width:4.3%"></div></div></div><div class="gline">YouTube · horas 28d (meta 4,000 h) <b>100.0 / 4,000</b></div><div class="prog" style="margin-top:2px"><div class="tr"><div class="fl" style="width:2.5%"></div></div></div><div class="gline">Facebook · seguidores (Stars: 500) <b>26 / 500</b></div><div class="prog" style="margin-top:2px"><div class="tr"><div class="fl" style="width:5.2%"></div></div></div></div><div class="goal-card" style="--c:#7D3C98"><h4>🎮 Gta6mx</h4><div class="gline">YouTube · subs (meta 1,000) <b>6 / 1,000</b></div><div class="prog" style="margin-top:2px"><div class="tr"><div class="fl" style="width:0.6%"></div></div></div><div class="gline">YouTube · horas 28d (meta 4,000 h) <b>18.3 / 4,000</b></div><div class="prog" style="margin-top:2px"><div class="tr"><div class="fl" style="width:0.5%"></div></div></div><div class="gline">Facebook · seguidores (Stars: 500) <b>3 / 500</b></div><div class="prog" style="margin-top:2px"><div class="tr"><div class="fl" style="width:0.6%"></div></div></div></div><div class="goal-card" style="--c:#1A1A1A"><h4>🎬 Stickman Consciente</h4><div class="gline">YouTube · subs (meta 1,000) <b>15 / 1,000</b></div><div class="prog" style="margin-top:2px"><div class="tr"><div class="fl" style="width:1.5%"></div></div></div><div class="gline">YouTube · horas 28d (meta 4,000 h) <b>54.8 / 4,000</b></div><div class="prog" style="margin-top:2px"><div class="tr"><div class="fl" style="width:1.4%"></div></div></div><div class="gline">Facebook · seguidores (Stars: 500): sin dato</div></div><div class="goal-card" style="--c:#0E7C7B"><h4>🫀 El Cuerpo Habla</h4><div class="gline">YouTube · subs (meta 1,000) <b>7 / 1,000</b></div><div class="prog" style="margin-top:2px"><div class="tr"><div class="fl" style="width:0.7%"></div></div></div><div class="gline">YouTube · horas 28d (meta 4,000 h) <b>16.1 / 4,000</b></div><div class="prog" style="margin-top:2px"><div class="tr"><div class="fl" style="width:0.4%"></div></div></div><div class="gline">Facebook · seguidores (Stars: 500) <b>3 / 500</b></div><div class="prog" style="margin-top:2px"><div class="tr"><div class="fl" style="width:0.6%"></div></div></div></div><div class="goal-card" style="--c:#2E86C1"><h4>📊 Garra Estadística</h4><div class="gline">YouTube · subs (meta 1,000) <b>3 / 1,000</b></div><div class="prog" style="margin-top:2px"><div class="tr"><div class="fl" style="width:0.3%"></div></div></div><div class="gline">YouTube · horas 28d (meta 4,000 h) <b>5.1 / 4,000</b></div><div class="prog" style="margin-top:2px"><div class="tr"><div class="fl" style="width:0.1%"></div></div></div><div class="gline">Facebook · seguidores (Stars: 500): sin dato</div></div><div class="goal-card" style="--c:#0B5345"><h4>💻 Sirio Code</h4><div class="gline">YouTube · subs (meta 1,000) <b>0 / 1,000</b></div><div class="prog" style="margin-top:2px"><div class="tr"><div class="fl" style="width:0.0%"></div></div></div><div class="gline">YouTube · horas 28d (meta 4,000 h) <b>0.0 / 4,000</b></div><div class="prog" style="margin-top:2px"><div class="tr"><div class="fl" style="width:0.0%"></div></div></div><div class="gline">Facebook · seguidores (Stars: 500) <b>1 / 500</b></div><div class="prog" style="margin-top:2px"><div class="tr"><div class="fl" style="width:0.2%"></div></div></div></div></div></div>
+<div class="card"><h2>⏱️ Horas de YouTube en 28 días</h2>
+<p style="margin:4px 0 0">Horas vistas en los últimos 28 días. Es el ritmo actual, no el acumulado de 12 meses que pide YouTube para cobrar (4,000 h).</p>
+<div class="tscroll"><table class="minitable"><tr><th>Canal</th><th>Horas 28d</th></tr><tr><td class="netname">El Rugido de la Fe</td><td class="num">100.0 h</td></tr><tr><td class="netname">Instinto de Tigre</td><td class="num">78.8 h</td></tr><tr><td class="netname">Stickman Consciente</td><td class="num">54.8 h</td></tr><tr><td class="netname">Garra Empresarial</td><td class="num">37.5 h</td></tr><tr><td class="netname">Gta6mx</td><td class="num">18.3 h</td></tr><tr><td class="netname">El Cuerpo Habla</td><td class="num">16.1 h</td></tr><tr><td class="netname">Garra Estadística</td><td class="num">5.1 h</td></tr><tr><td class="netname">Sirio Code</td><td class="num">0.0 h</td></tr></table></div></div>
+<div class="card"><h2>🏆 Top 5 videos en YouTube (28 días)</h2>
+<p style="margin:4px 0 0">Los 5 videos con más vistas en YouTube y lo que pagarían si fueran Shorts (vistas × $0.01–$0.07 por cada 1,000).</p>
+<div class="tscroll"><table class="minitable"><tr><th>Video</th><th>Vistas 28d</th><th>Estimado</th></tr><tr><td class="vname">Stickman ep01 «Lo perfecto espera…»</td><td class="num">7,333</td><td class="num">$0.07–$0.51 USD</td></tr><tr><td class="vname">Gta6mx tráiler</td><td class="num">2,819</td><td class="num">$0.03–$0.20 USD</td></tr><tr><td class="vname">El Cuerpo Habla «cruda»</td><td class="num">1,357</td><td class="num">$0.01–$0.09 USD</td></tr><tr><td class="vname">El Rugido de la Fe «Adán»</td><td class="num">1,332</td><td class="num">$0.01–$0.09 USD</td></tr><tr><td class="vname">Garra Empresarial «Ana»</td><td class="num">1,271</td><td class="num">$0.01–$0.09 USD</td></tr></table></div>
+<p class="note" style="margin-top:10px">Estimado = vistas × $0.01–$0.07 USD por cada 1,000. Stickman ep01 (7,333) pagaría $0.07–$0.51 USD en 28 días como Short.</p></div>
+<div class="card"><h2>💡 Tips</h2>
+<p style="margin:4px 0 0">Lo que conviene hacer (y lo que no) para que los videos paguen. Toca un tip para leerlo completo.</p>
+<div class="car-wrap"><div class="carousel" id="car-tips"><div class="v4card" onclick="openTip(0)"><p class="one">💡 Largos de 8+ min: los únicos con anuncios intermedios. Hoy solo Gta6mx tiene largos de 8+ (los de 12:10 y el…</p></div><div class="v4card" onclick="openTip(1)"><p class="one">💡 Shorts/Reels: cortos y virales. El dinero está en volumen + horas hacia YPP, no en el pago por vista.</p></div><div class="v4card" onclick="openTip(2)"><p class="one">💡 Facebook Reels paga más por vista que Shorts ($0.02–$0.20 vs $0.01–$0.07): Garra es el ejemplo (16,256 vistas…</p></div><div class="v4card" onclick="openTip(3)"><p class="one">💡 Bloqueados hoy: Gta6mx y Stickman tienen «Established presence» en monetización — aunque lleguen a los…</p></div><div class="v4card" onclick="openTip(4)"><p class="one">💡 El progreso hacia las metas (subs/horas) está en Estadísticas.</p></div><div class="v4card" onclick="openTip(5)"><p class="one">💡 Un largo de 100,000 vistas paga $100–$600: 100 Shorts con 7,333 vistas (como el ep01 de Stickman) pagan…</p></div><div class="v4card" onclick="openTip(6)"><p class="one">💡 El Cuerpo Habla está a 40 seguidores de los 500 de IG, pero IG no paga por vistas: el dinero está en llevar…</p></div></div><button class="car-nav prev" onclick="carScroll('car-tips',-1)" aria-label="Anterior">‹</button><button class="car-nav next" onclick="carScroll('car-tips',1)" aria-label="Siguiente">›</button></div></div>
+<div class="card"><h2>⚠️ Bloqueos de monetización</h2>
+<p style="margin:4px 0 0">Dos canales no pueden cobrar aunque lleguen a los números, hasta que se levante el bloqueo.</p>
+<div class="warn"><b>Gta6mx:</b> monetización bloqueada por «Established presence» (10 seguidores, cuenta de ~5 días) + 2 avisos de originalidad en IG. No pedir la revisión de 90 días todavía; el clip de Mandy sigue en pausa.</div>
+<div class="warn" style="margin-top:10px"><b>Stickman Consciente:</b> monetización bloqueada por «Established presence» (14 seguidores, cuenta de 4 días). No pedir la revisión todavía.</div></div>
+<footer>Datos del dossier v3 (23 nov 2026, noche). «Sin dato» = no existe o no se pudo leer; nada inventado.</footer>
+</div><div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()"><div class="modal-panel" id="modal-panel" role="dialog" aria-modal="true"><button class="modal-close" onclick="closeModal()" aria-label="Cerrar">✕</button><div id="modal-body"></div></div></div><script>window.TIPS=["Largos de 8+ min: los únicos con anuncios intermedios. Hoy solo Gta6mx tiene largos de 8+ (los de 12:10 y el de NPCs de 10:26). Los de El Rugido (~5 min) NO llegan a 8 min.", "Shorts/Reels: cortos y virales. El dinero está en volumen + horas hacia YPP, no en el pago por vista.", "Facebook Reels paga más por vista que Shorts ($0.02–$0.20 vs $0.01–$0.07): Garra es el ejemplo (16,256 vistas totales en FB).", "Bloqueados hoy: Gta6mx y Stickman tienen «Established presence» en monetización — aunque lleguen a los números, no cobran hasta que se levante el bloqueo.", "El progreso hacia las metas (subs/horas) está en Estadísticas.", "Un largo de 100,000 vistas paga $100–$600: 100 Shorts con 7,333 vistas (como el ep01 de Stickman) pagan $7–$51 en total. El largo rinde más por vista que el Short.", "El Cuerpo Habla está a 40 seguidores de los 500 de IG, pero IG no paga por vistas: el dinero está en llevar esa audiencia a YouTube y Facebook."];function openTip(i){var t=window.TIPS[i];if(!t)return;_mopen('<h2 style="margin-top:6px">💡 Tip</h2><p>'+t+'</p>');}</script><script>
+function hexA(h,a){var r=parseInt(h.slice(1,3),16),g=parseInt(h.slice(3,5),16),b=parseInt(h.slice(5,7),16);return 'rgba('+r+','+g+','+b+','+a+')';}
+function barGrad(cv,hex){var g=cv.getContext('2d').createLinearGradient(0,0,cv.width||600,0);g.addColorStop(0,hexA(hex,1));g.addColorStop(1,hexA(hex,.5));return g;}
+function lineGrad(cv,hex){var g=cv.getContext('2d').createLinearGradient(0,0,0,cv.height||260);g.addColorStop(0,hexA(hex,.30));g.addColorStop(1,hexA(hex,.02));return g;}
+var ELEGANT_TIP={backgroundColor:'rgba(15,23,42,.93)',titleColor:'#f8fafc',bodyColor:'#e2e8f0',padding:12,cornerRadius:10,boxPadding:5,displayColors:false,titleFont:{size:13,weight:'700'},bodyFont:{size:12}};
+function elegantFonts(){if(window.Chart){Chart.defaults.font.family="'Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif";}}
+function toggleTheme(){var h=document.documentElement;var t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);try{localStorage.setItem('theme',t);}catch(e){}syncThemeBtn();if(window.Chart){Chart.defaults.color=t==='dark'?'#cbd5e1':'#5a6b7f';Chart.defaults.borderColor=t==='dark'?'rgba(148,163,184,.25)':'rgba(0,0,0,.1)';elegantFonts();}if(window.__simRefresh)window.__simRefresh();var on=document.querySelector('.panel.on');if(on&&window.__buildChart){window.__buildChart(on.id.replace('panel-',''));}}
+function syncThemeBtn(){var b=document.querySelector('.theme-toggle');if(b)b.textContent=document.documentElement.getAttribute('data-theme')==='dark'?'☀️ Claro':'🌙 Oscuro';}
+document.addEventListener('DOMContentLoaded',function(){syncThemeBtn();elegantFonts();if(window.Chart&&document.documentElement.getAttribute('data-theme')==='dark'){Chart.defaults.color='#cbd5e1';Chart.defaults.borderColor='rgba(148,163,184,.25)';}});
+
+var SIM_RATES=[["YouTube largo",1,6,"#FF0000"],["YouTube Shorts",0.01,0.07,"#FF0000"],["Facebook Reels",0.02,0.20,"#1877F2"],["Instagram",0,0,"#E1306C"],["Threads",0,0,"#6b7280"]];
+var simChart=null;
+function simMoney(n){if(n>=100)return '$'+Math.round(n);return '$'+n.toFixed(2);}
+function simRange(lo,hi){return simMoney(lo)+'–'+simMoney(hi)+' USD';}
+function simUpdate(){var s=document.getElementById('sim-slider');if(!s)return;var v=Math.round(Math.pow(10,parseFloat(s.value)));
+ document.getElementById('sim-views').textContent=v.toLocaleString('en-US')+' vistas';
+ var mids=SIM_RATES.map(function(r){return v/1000*(r[1]+r[2])/2;});
+ document.getElementById('sim-range').textContent='Con '+v.toLocaleString('en-US')+' vistas: '+SIM_RATES.map(function(r){return r[0]+' '+simRange(v/1000*r[1],v/1000*r[2]);}).join(' · ');
+ var rows=document.getElementById('sim-rows');
+ if(rows){var mx=Math.max.apply(null,mids.concat([0.01]));rows.innerHTML=SIM_RATES.map(function(r,i){var w=mids[i]>0?Math.max(2,Math.round(mids[i]/mx*100)):0;return '<div class="sim-row"><span class="snet" style="color:'+r[3]+'">'+r[0]+'</span><span class="sbar"><span class="sfill" style="display:block;width:'+w+'%;background:linear-gradient(90deg,'+r[3]+','+hexA(r[3],.55)+')"></span></span><span class="samt">'+simRange(v/1000*r[1],v/1000*r[2])+'</span></div>';}).join('');}
+ var cv=document.getElementById('sim-chart');
+ if(window.Chart){if(simChart)simChart.destroy();
+  simChart=new Chart(cv,{type:'bar',data:{labels:SIM_RATES.map(function(r){return r[0];}),datasets:[{data:mids,backgroundColor:SIM_RATES.map(function(r){return barGrad(cv,r[3]);}),borderRadius:10,borderSkipped:false,barPercentage:.7,categoryPercentage:.8}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{backgroundColor:'rgba(15,23,42,.93)',titleColor:'#f8fafc',bodyColor:'#e2e8f0',padding:12,cornerRadius:10,boxPadding:5,displayColors:false,titleFont:{size:13,weight:'700'},bodyFont:{size:12},callbacks:{label:function(c){var r=SIM_RATES[c.dataIndex];return ' '+simRange(v/1000*r[1],v/1000*r[2]);}}}},scales:{x:{beginAtZero:true,grid:{drawBorder:false},ticks:{callback:function(val){return '$'+val;},font:{size:12}}},y:{grid:{display:false},ticks:{font:{size:13,weight:'600'}}}}}});
+ }else{cv.style.display='none';document.getElementById('sim-fb').innerHTML=SIM_RATES.map(function(r,i){return r[0]+': '+simMoney(mids[i])+' USD (rango '+simRange(v/1000*r[1],v/1000*r[2])+')';}).join('<br>');}}
+function simPreset(v,btn){document.getElementById('sim-slider').value=Math.log10(v);document.querySelectorAll('.sim-btn').forEach(function(b){b.classList.remove('on');});btn.classList.add('on');simUpdate();}
+window.__simRefresh=function(){simUpdate();};
+document.addEventListener('DOMContentLoaded',function(){simUpdate();});
+
+function carScroll(id,dir){var el=document.getElementById(id);if(el)el.scrollBy({left:dir*320,behavior:'smooth'});}
+var _mcharts=[];
+function closeModal(){var m=document.getElementById('modal');if(m)m.classList.remove('open');_mcharts.forEach(function(c){try{c.destroy();}catch(e){}});_mcharts=[];}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+function _mopen(html){document.getElementById('modal-body').innerHTML=html;document.getElementById('modal').classList.add('open');}
+function _mline(cid,labels,data,color){var cv=document.getElementById(cid);if(!cv)return;
+ if(window.Chart){var ch=new Chart(cv,{type:'line',data:{labels:labels,datasets:[{data:data,borderColor:color,backgroundColor:lineGrad(cv,color),fill:true,tension:.35,spanGaps:true,borderWidth:3,pointRadius:4,pointBackgroundColor:color,pointBorderColor:'#fff',pointBorderWidth:2,pointHoverRadius:6}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:ELEGANT_TIP},scales:{y:{beginAtZero:false,ticks:{callback:function(v){return v>=1000?(v/1000).toFixed(1)+'k':v;},font:{size:12}}},x:{ticks:{font:{size:12}}}}}});_mcharts.push(ch);}
+ else{cv.style.display='none';var fb=document.getElementById(cid+'-fb');if(fb)fb.innerHTML=labels.map(function(l,i){return data[i]==null?'':l+': '+data[i].toLocaleString();}).filter(Boolean).join('<br>');}}
+function _mavatar(d){return d.photo?'<img src="'+d.photo+'" alt="">':'<div class="mini-av-fb" style="--c:'+d.color+'">'+d.fb+'</div>';}
+function _folNote(vals){var n=vals.filter(function(v){return v!=null;}).length;return n>=2?'':(n===1?'Una sola lectura (noche 23 nov).':'Sin dato.');}
+function openChan(k){var d=window.DETAIL.chan[k];if(!d)return;window._mchan=k;
+ var nets='';Object.keys(d.nets).forEach(function(net){var n=d.nets[net];nets+='<tr><td><b>'+net+'</b></td><td>'+(n.fol==null?'—':n.fol.toLocaleString())+'</td><td>'+(n.tot==null?'—':n.tot.toLocaleString())+'</td><td>'+(n.top?('🏆 '+n.top+' · <b>'+n.topv.toLocaleString()+'</b>'):'sin dato')+'</td></tr>';});
+ var g=d.grow;var ghtml=g?('<p><b>🚀 El que más crece:</b> '+g.title+' ('+g.net+') · <b>'+g.views.toLocaleString()+'</b> vistas'+(g.delta==null?'':' · ▲ +'+g.delta.toLocaleString())+'</p>'):'';
+ var pair='';if(g&&g.pair&&g.delta){pair='<div class="mlab">Evolución de ese video · tarde → noche 23 nov</div><div class="mchart"><canvas id="m-pair"></canvas></div><div id="m-pair-fb"></div>';}
+ var h='<div class="mrow" style="--c:'+d.color+'">'+_mavatar(d)+'<div><h2 style="margin:0">'+d.emoji+' '+d.name+'</h2><div class="note">'+d.handle+' · '+d.verdict+'</div><div><b>'+d.fol_total.toLocaleString()+'</b> '+(d.fol_total===1?'seguidor':'seguidores')+' en total</div></div></div>'
+  +'<div class="mlab">Cifras por red</div><table class="mtable"><tr><th>Red</th><th>Seg.</th><th>Vistas</th><th>Top</th></tr>'+nets+'</table>'
+  +ghtml+pair
+  +'<div class="mlab">Evolución · vistas totales</div><div class="evo-btns"><button class="fbtn on" data-net="Instagram" onclick="mDrawEvoBtn(this)">Instagram</button><button class="fbtn" data-net="Facebook" onclick="mDrawEvoBtn(this)">Facebook</button></div><div class="mchart"><canvas id="m-evo"></canvas></div><div id="m-evo-fb"></div>'
+  +'<div class="mlab">Evolución · seguidores</div><div class="evo-btns"><button class="fbtn on" data-net="Instagram" onclick="mDrawFolBtn(this)">Instagram</button><button class="fbtn" data-net="Facebook" onclick="mDrawFolBtn(this)">Facebook</button></div><div class="mchart"><canvas id="m-fol"></canvas></div><div id="m-fol-fb"></div><div class="note" id="m-fol-note"></div>'
+  +'<div class="mlab">Qué está pegando</div><p>'+d.pegando+'</p>'
+  +'<div class="mlab">Qué se puede mejorar</div><p>'+d.mejorar+'</p>'
+  +'<div class="mlab">Fórmula · hora ideal</div><p>'+d.formula+'<br><b>🕐 '+d.hora+'</b></p>';
+ _mopen(h);
+ if(g&&g.pair&&g.delta)_mline('m-pair',['tarde 23 nov','noche 23 nov'],g.pair,d.color);
+ mDrawEvo('Instagram');mDrawFol('Instagram');}
+function mDrawEvoBtn(b){mDrawEvo(b.getAttribute('data-net'),b);}
+function mDrawFolBtn(b){mDrawFol(b.getAttribute('data-net'),b);}
+function mDrawEvo(net,btn){var d=window.DETAIL.chan[window._mchan];if(!d)return;if(btn){btn.parentElement.querySelectorAll('.fbtn').forEach(function(b){b.classList.remove('on');});btn.classList.add('on');}_mline('m-evo',d.evo.labels,d.evo[net],d.color);}
+function mDrawFol(net,btn){var d=window.DETAIL.chan[window._mchan];if(!d)return;if(btn){btn.parentElement.querySelectorAll('.fbtn').forEach(function(b){b.classList.remove('on');});btn.classList.add('on');}var vals=d.fol[net];document.getElementById('m-fol-note').textContent=_folNote(vals);_mline('m-fol',d.fol.labels,vals,d.color);}
+function openVideo(id,el){var v=window.DETAIL.video[id];if(!v)return;var d=window.DETAIL.chan[v.chan];
+ var cover='';if(el){var c=el.querySelector('.vcover,.vcover-fb');if(c)cover=c.outerHTML.replace('class="vcover"','class="mcover"').replace('class="vcover-fb"','class="mcover"');}
+ var pair='';if(v.pair)pair='<div class="mlab">Evolución · tarde → noche 23 nov</div><div class="mchart"><canvas id="m-pair"></canvas></div><div id="m-pair-fb"></div>';
+ var h='<div class="mrow" style="--c:'+d.color+'">'+_mavatar(d)+'<div><h2 style="margin:0">'+d.name+'</h2><div class="note">'+v.net+' · '+v.level+'</div></div></div>'
+  +cover+'<h2 style="margin-top:6px">'+v.title+'</h2><p class="note">'+v.views+'</p>'
+  +(v.why?'<div class="mlab">Por qué pegó</div><p>'+v.why+'</p>':'')
+  +(v.lacked?'<div class="mlab">Le faltó</div><p>'+v.lacked+'</p>':'')
+  +(v.improve?'<div class="mlab">¿Cómo se mejora?</div><p>'+v.improve+'</p>':'')
+  +(v.hook&&v.hook!=='—'?'<div class="mlab">Nuevo texto</div><p>🆕 '+v.hook+'</p>':'')+pair;
+ _mopen(h);if(v.pair)_mline('m-pair',['tarde 23 nov','noche 23 nov'],v.pair,d.color);}
+function openCal(id){var c=window.DETAIL.cal[id];if(!c)return;var d=window.DETAIL.chan[c.chan];
+ var h='<div class="mrow" style="--c:'+d.color+'">'+_mavatar(d)+'<div><h2 style="margin:0">'+d.name+'</h2><div class="note">'+c.day+' · 🕐 '+c.hora+'</div></div></div>'
+  +(c.cover?'<img class="mcover" src="'+c.cover+'" alt="">':'')
+  +'<h2 style="margin-top:6px">'+c.text+'</h2>'
+  +'<p>'+(c.real?'🎬 Video real que ya está en ⏳ Por subir.':'💡 Idea nueva (el canal no tiene pendientes).')+'</p>';
+ _mopen(h);}
+function openProx(k){var p=window.DETAIL.prox[k];var d=window.DETAIL.chan[k];if(!p)return;
+ var h='<div class="mrow" style="--c:'+d.color+'">'+_mavatar(d)+'<div><h2 style="margin:0">🎬 Tu próximo video — '+d.name+'</h2></div></div>'
+  +'<div class="mlab">Tema</div><p>'+p.tema+'</p><div class="mlab">Gancho</div><p>'+p.gancho+'</p><div class="mlab">Formato</div><p>'+p.formato+'</p><div class="mlab">Duración</div><p>'+p.dur+'</p><div class="mlab">Publicar primero</div><p>'+p.red+'</p>'
+  +'<div class="mlab">🚫 No hagas esto</div><p>'+p.no+'</p>';
+ _mopen(h);}
+</script></body></html>
