@@ -6,6 +6,10 @@ header{background:#101828;color:#fff;padding:22px 18px 16px}header h1{margin:0 0
 .strip{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
 .pill{background:#fff;border:1px solid #dfe4ea;border-left:4px solid var(--c,#888);border-radius:8px;padding:8px 10px;font-size:12px;min-width:150px;flex:1}
 .pill b{display:block;font-size:13px}.pill span{color:#5a6b7f}
+.pill .pill-h{display:flex;gap:8px;align-items:center}
+.pill .pill-h img{width:30px;height:30px;border-radius:50%;object-fit:cover;border:2px solid var(--c);flex:none}
+.pill .pill-h .mini-av-fb{width:30px;height:30px;border-radius:50%;background:var(--c);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;border:2px solid var(--c);flex:none}
+.pill .pill-h b{font-size:13px}
 .tabs{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 12px}
 .tab{border:1px solid #cdd5df;background:#fff;border-radius:20px;padding:7px 13px;font-size:13px;cursor:pointer;white-space:nowrap}
 .tab.on{background:var(--c,#101828);color:#fff;border-color:var(--c,#101828)}
@@ -269,18 +273,47 @@ header h1{font-size:20px}.cover-head h1{font-size:24px}
 .prox .k{width:110px}.cal-row{grid-template-columns:64px 1fr 70px;font-size:13.5px}
 }
 /* ---- v4: carruseles, selector de canales, modal, tira de días ---- */
-.carousel{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:4px 16px 10px 2px;scrollbar-width:none}
+/* v5.1: las flechas van ARRIBA del carrusel (nunca sobre las tarjetas); la fila de
+   canales cabe entera (wrap, sin scroll lateral); snap + espaciador final para
+   que ninguna tarjeta quede cortada a la mitad. */
+.carousel{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:4px 16px 10px 2px;scrollbar-width:none;scroll-padding:2px 16px;overscroll-behavior-x:contain}
 .carousel>*{scroll-snap-align:start;flex:0 0 300px}
-.carousel::after{content:'';flex:0 0 4px}
+.carousel::after{content:'';flex:0 0 16px}
 .carousel::-webkit-scrollbar{display:none}
-.car-wrap{position:relative}
-.car-nav{position:absolute;top:38%;z-index:3;width:34px;height:34px;border-radius:50%;border:1px solid #cdd5df;background:#fff;color:#1c2430;font-size:18px;font-weight:800;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);display:flex;align-items:center;justify-content:center}
-.car-nav.prev{left:-6px}.car-nav.next{right:-6px}
-.chan-nav{flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 16px 8px 2px;scrollbar-width:none}
-.chan-nav::after{content:'';flex:0 0 6px}
+.car-wrap{position:relative;display:flex;flex-direction:column}
+.car-wrap .carousel{order:2;min-width:0}
+.car-navrow{display:flex;justify-content:flex-end;gap:6px;margin:0 0 6px;order:1}
+.car-nav{position:static;width:32px;height:32px;border-radius:50%;border:1px solid #cdd5df;background:#fff;color:#1c2430;font-size:18px;font-weight:800;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);display:flex;align-items:center;justify-content:center}
+.chan-nav{flex-wrap:wrap;overflow-x:visible;scroll-snap-type:none;padding:4px 2px 8px;scrollbar-width:none}
+.chan-nav::after{content:none}
 .chan-nav::-webkit-scrollbar{display:none}
 .chan-nav .tab{flex:none;scroll-snap-align:start;white-space:nowrap}
 .chan-nav .tab.on{box-shadow:0 0 0 2px var(--c)}
+/* v5.1: las portadas verticales se recortan desde ARRIBA (ahí está el título/gancho),
+   no desde el centro: así la miniatura se reconoce como la de su video. */
+.vthumb,.vcover,.dthumb{object-position:top center}
+/* ---- v5.1: tarjetas por red (estadísticas): logo+color de red, miniaturas,
+   deltas y mini-gráfica de barras más/menos/promedio ---- */
+.netcards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.netcard2{border:1px solid #e2e8f0;border-top:5px solid var(--nc,#888);border-radius:12px;padding:14px;background:#fff}
+.netcard2 .neth{display:flex;gap:8px;align-items:center;font-weight:800;font-size:15px}
+.netcard2 .neth svg{flex:none}
+.netcard2 .nth{width:100%;height:110px;object-fit:cover;object-position:top center;border-radius:8px;margin:10px 0 0}
+.netcard2 .nth-fb{width:100%;height:110px;border-radius:8px;background:#eef2f6;color:#5a6b7f;display:flex;flex-direction:column;gap:6px;align-items:center;justify-content:center;margin:10px 0 0;padding:10px;text-align:center;font-size:12.5px;font-weight:700;line-height:1.35}
+.netcard2 .nth-fb svg{flex:none}
+.netcard2 .nv{font-size:13.5px;line-height:1.45;margin:8px 0 0}
+.netcard2 .nv b{font-size:15px}
+.netcard2 .nv .tt{font-weight:700}
+.netcard2 .mini-bars{margin-top:10px}
+.netcard2 .mb-row{display:flex;align-items:center;gap:8px;font-size:12.5px;padding:3px 0}
+.netcard2 .mb-row .mbl{width:86px;flex:none;font-weight:700;color:#5a6b7f}
+.netcard2 .mb-row .mbt{flex:1;height:10px;background:#e9eef3;border-radius:5px;overflow:hidden}
+.netcard2 .mb-row .mbf{height:100%;border-radius:5px}
+.netcard2 .mb-row .mbv{width:74px;flex:none;text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+html[data-theme="dark"] .netcard2{background:#1e293b;border-color:#334155}
+html[data-theme="dark"] .netcard2 .nth-fb{background:#0f172a;color:#94a3b8}
+html[data-theme="dark"] .netcard2 .mb-row .mbl{color:#94a3b8}
+html[data-theme="dark"] .netcard2 .mb-row .mbt{background:#334155}
 .daycard{border:1px solid #e2e8f0;border-top:5px solid var(--c,#888);border-radius:12px;padding:12px;background:#fff;cursor:pointer;text-align:left;width:100%}
 .daycard:hover{border-color:#101828}
 .daycard .dch{display:flex;gap:8px;align-items:center;font-weight:700;font-size:13.5px}
@@ -347,7 +380,8 @@ header h1{font-size:20px}.cover-head h1{font-size:24px}
 @media(max-width:640px){
 .daystrip{grid-template-columns:repeat(2,1fr)}
 .carousel>*{flex-basis:250px}
-.car-nav{display:none}
+.car-navrow{display:none}
+.netcards{grid-template-columns:1fr}
 .sim-row .snet{width:130px}
 .modal-panel{padding:16px}
 }
@@ -413,7 +447,7 @@ html[data-theme="dark"] .netcard .nsec .vv{color:#94a3b8}
 <div class="section" style="margin-top:36px"><h2>Pícale a una de las tres 👇</h2>
 <p class="sub"><b>Estadísticas</b> = los números por canal y por red. <b>Análisis</b> = qué pegó, qué le faltó y cómo se mejora, video por video. <b>Monetización</b> = cuánto paga cada red y qué falta para cobrar.</p>
 <div class="hero">
-<a class="bigcard" href="estadisticas.html"><h2>📊 Estadísticas</h2><p>Por canal y por red: seguidores, vistas totales, video más viral, tendencia, gráficas de barras de vistas por video y monetización — cuánto falta para cada meta.</p><div class="go">Ver estadísticas →</div></a>
+<a class="bigcard" href="estadisticas.html"><h2>📊 Estadísticas</h2><p>Por canal y por red: seguidores, vistas totales, video más viral, tendencia, gráficas de evolución y qué está creciendo ahorita.</p><div class="go">Ver estadísticas →</div></a>
 <a class="bigcard" href="analisis.html"><h2>🎯 Análisis de canales</h2><p>Por canal y por red: el video que más pegó, por qué funcionó y cómo repetirlo; y el que menos, qué le faltó. Calendario de la semana y recetas por red.</p><div class="go">Ver análisis →</div></a>
 <a class="bigcard" href="monetizacion.html"><h2>💰 Monetización</h2><p>Cuánto paga cada red por 1,000 vistas, cuánto ganarían los videos de hoy y qué falta para cobrar. Simulador en dólares.</p><div class="go">Ver monetización →</div></a>
 </div></div>
