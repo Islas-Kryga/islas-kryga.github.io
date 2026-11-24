@@ -7,7 +7,7 @@ header{background:#101828;color:#fff;padding:22px 18px 16px}header h1{margin:0 0
 .pill{background:#fff;border:1px solid #dfe4ea;border-left:4px solid var(--c,#888);border-radius:8px;padding:8px 10px;font-size:12px;min-width:150px;flex:1}
 .pill b{display:block;font-size:13px}.pill span{color:#5a6b7f}
 .tabs{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 12px}
-.tab{border:1px solid #cdd5df;background:#fff;border-radius:20px;padding:7px 13px;font-size:13px;cursor:pointer}
+.tab{border:1px solid #cdd5df;background:#fff;border-radius:20px;padding:7px 13px;font-size:13px;cursor:pointer;white-space:nowrap}
 .tab.on{background:var(--c,#101828);color:#fff;border-color:var(--c,#101828)}
 .panel{display:none}.panel.on{display:block}
 .card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:14px;margin:0 0 12px}
@@ -18,7 +18,7 @@ header{background:#101828;color:#fff;padding:22px 18px 16px}header h1{margin:0 0
 .net .top{font-size:12.5px;margin-top:6px}.net .trend{font-size:12px;color:#0b7a45;font-weight:600}
 .net .nodata{color:#8a97a8;font-size:13px}
 .fbtns{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}
-.fbtn{border:1px solid #cdd5df;background:#eef2f6;border-radius:16px;padding:5px 11px;font-size:12.5px;cursor:pointer}
+.fbtn{border:1px solid #cdd5df;background:#eef2f6;border-radius:16px;padding:5px 11px;font-size:12.5px;cursor:pointer;white-space:nowrap}
 .fbtn.on{background:var(--ncl,var(--nc,#101828));color:#fff;border-color:var(--ncl,var(--nc,#101828))}
 .bar-row{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:13px}
 .bar-row .lbl{width:210px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -34,7 +34,7 @@ header{background:#101828;color:#fff;padding:22px 18px 16px}header h1{margin:0 0
 .hook b{color:#92400e}
 .tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;color:#fff;margin-bottom:6px}
 .subtabs{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
-.stab{border:1px solid #cdd5df;background:#fff;border-radius:16px;padding:5px 12px;font-size:12.5px;cursor:pointer}
+.stab{border:1px solid #cdd5df;background:#fff;border-radius:16px;padding:5px 12px;font-size:12.5px;cursor:pointer;white-space:nowrap}
 .stab.on{background:var(--ncl,var(--nc,#101828));color:#fff;border-color:var(--ncl,var(--nc,#101828))}
 .sub{display:none}.sub.on{display:block}
 .note{font-size:12px;color:#5a6b7f}
@@ -269,15 +269,17 @@ header h1{font-size:20px}.cover-head h1{font-size:24px}
 .prox .k{width:110px}.cal-row{grid-template-columns:64px 1fr 70px;font-size:13.5px}
 }
 /* ---- v4: carruseles, selector de canales, modal, tira de días ---- */
-.carousel{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:4px 2px 10px;scrollbar-width:thin}
+.carousel{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:4px 16px 10px 2px;scrollbar-width:none}
 .carousel>*{scroll-snap-align:start;flex:0 0 300px}
-.carousel::-webkit-scrollbar{height:6px}
-.carousel::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
+.carousel::after{content:'';flex:0 0 4px}
+.carousel::-webkit-scrollbar{display:none}
 .car-wrap{position:relative}
 .car-nav{position:absolute;top:38%;z-index:3;width:34px;height:34px;border-radius:50%;border:1px solid #cdd5df;background:#fff;color:#1c2430;font-size:18px;font-weight:800;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);display:flex;align-items:center;justify-content:center}
 .car-nav.prev{left:-6px}.car-nav.next{right:-6px}
-.chan-nav{flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
-.chan-nav .tab{flex:none;scroll-snap-align:start}
+.chan-nav{flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 16px 8px 2px;scrollbar-width:none}
+.chan-nav::after{content:'';flex:0 0 6px}
+.chan-nav::-webkit-scrollbar{display:none}
+.chan-nav .tab{flex:none;scroll-snap-align:start;white-space:nowrap}
 .chan-nav .tab.on{box-shadow:0 0 0 2px var(--c)}
 .daycard{border:1px solid #e2e8f0;border-top:5px solid var(--c,#888);border-radius:12px;padding:12px;background:#fff;cursor:pointer;text-align:left;width:100%}
 .daycard:hover{border-color:#101828}
@@ -366,7 +368,6 @@ html[data-theme="dark"] .pay-table td{border-color:#1e293b}
 html[data-theme="dark"] .pay-table .cond{color:#94a3b8}
 html[data-theme="dark"] .sim-row{border-color:#1e293b}
 html[data-theme="dark"] .sim-row .sbar{background:#334155}
-html[data-theme="dark"] .carousel::-webkit-scrollbar-thumb{background:#475569}
 </style><script>try{var t=localStorage.getItem('theme');if(!t)t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}</script></head><body>
 <header class="cover-head"><div class="wrap"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar entre modo claro y oscuro">🌙 Oscuro</button><h1>📺 Canales de Julio — Estadísticas y Análisis</h1>
 <p class="lede">El panel de los 8 canales de Julio en Instagram, Facebook, YouTube y Threads: qué está pasando con cada video, cuál pegó, cuál no, y qué se puede mejorar. Se actualiza dos veces al día, en la mañana y en la noche.</p>
