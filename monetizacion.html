@@ -23,6 +23,7 @@ header{background:#101828;color:#fff;padding:22px 18px 16px}header h1{margin:0 0
 .net .nodata{color:#8a97a8;font-size:13px}
 .fbtns{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}
 .fbtn{border:1px solid #cdd5df;background:#eef2f6;border-radius:16px;padding:5px 11px;font-size:12.5px;cursor:pointer;white-space:nowrap}
+.fbtn svg{vertical-align:-2px;margin-right:3px}
 .fbtn.on{background:var(--ncl,var(--nc,#101828));color:#fff;border-color:var(--ncl,var(--nc,#101828))}
 .bar-row{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:13px}
 .bar-row .lbl{width:210px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -209,7 +210,7 @@ html[data-theme="dark"] .warn{background:#450a0a;border-color:#7f1d1d}
 .viral .vthumb-fb{width:100%;height:96px}
 .viral .vthumb-fb{height:96px;font-size:11.5px}
 .vthumb{width:64px;flex:none;border-radius:8px;border:1px solid #e2e8f0;display:block}
-.vthumb-fb{width:64px;flex:none;min-height:100px;border-radius:8px;background:var(--c);color:#fff;display:flex;align-items:center;justify-content:center;padding:6px;font-size:11px;font-weight:700;text-align:center;line-height:1.3}
+.vthumb-fb{width:64px;flex:none;min-height:100px;border-radius:8px;background:var(--c);color:#fff;display:flex;align-items:center;justify-content:center;padding:6px;font-size:11px;font-weight:700;text-align:center;line-height:1.3;overflow:hidden;overflow-wrap:break-word;word-break:break-word}
 .trend-up{color:#0b7a45;font-weight:700;white-space:nowrap}
 .trend-down{color:#dc2626;font-weight:700;white-space:nowrap}
 .trend-flat{color:#5a6b7f;font-weight:700;white-space:nowrap}
@@ -332,7 +333,7 @@ header h1{font-size:20px}.cover-head h1{font-size:24px}
 .netcard2 .nth{width:100%;height:110px;object-fit:contain;background:#101828;border-radius:8px;margin:10px 0 0}
 .netcard2 .nr-row{display:flex;gap:10px;align-items:flex-start;margin:10px 0 0}
 .netcard2 .nr-row .vthumb{width:64px;flex:none;height:114px;object-fit:contain;background:#101828;margin:0}
-.netcard2 .nr-row .vthumb-fb{width:64px;flex:none;min-height:114px;margin:0}
+.netcard2 .nr-row .vthumb-fb{width:64px;flex:none;min-height:114px;margin:0;font-size:10px;padding:4px}
 .netcard2 .nr-row .nv{margin:0;flex:1;min-width:0}
 .netcard2 .mini-chart-wrap{display:none;height:130px;margin-top:10px}
 .netcard2 .mini-chart-wrap canvas{width:100%!important;height:100%!important}
@@ -549,7 +550,7 @@ function openChan(k){var d=window.DETAIL.chan[k];if(!d)return;window._mchan=k;
  var h='<div class="mrow" style="--c:'+d.color+'">'+_mavatar(d)+'<div><h2 style="margin:0">'+d.emoji+' '+d.name+'</h2><div class="note">'+d.handle+' · '+d.verdict+'</div><div><b>'+d.fol_total.toLocaleString()+'</b> '+(d.fol_total===1?'seguidor':'seguidores')+' en total</div></div></div>'
   +'<div class="mlab">Cifras por red</div><table class="mtable"><tr><th>Red</th><th>Seg.</th><th>Vistas</th><th>Top</th></tr>'+nets+'</table>'
   +ghtml+pair
-  +'<div class="mlab">Evolución · vistas totales</div><div class="evo-btns"><button class="fbtn on" data-net="Instagram" onclick="mDrawEvoBtn(this)">Instagram</button><button class="fbtn" data-net="Facebook" onclick="mDrawEvoBtn(this)">Facebook</button></div><div class="mchart"><canvas id="m-evo"></canvas></div><div id="m-evo-fb"></div>'
+  +'<div class="mlab">Evolución · vistas totales</div><div class="evo-btns"><button class="fbtn on" data-net="Instagram" onclick="mDrawEvoBtn(this)"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg>Instagram</button><button class="fbtn" data-net="Facebook" onclick="mDrawEvoBtn(this)"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8V11H8v3h2.5v7h3z" fill="currentColor"/></svg>Facebook</button><button class="fbtn" data-net="YouTube" onclick="mDrawEvoBtn(this)"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor"/><path d="M10 9.5v5l4.5-2.5z" fill="#fff"/></svg>YouTube</button></div><div class="mchart"><canvas id="m-evo"></canvas></div><div id="m-evo-fb"></div>'
   +'<div class="mlab">Evolución · seguidores</div><div class="evo-btns"><button class="fbtn on" data-net="Instagram" onclick="mDrawFolBtn(this)">Instagram</button><button class="fbtn" data-net="Facebook" onclick="mDrawFolBtn(this)">Facebook</button></div><div class="mchart"><canvas id="m-fol"></canvas></div><div id="m-fol-fb"></div><div class="note" id="m-fol-note"></div>'
   +(document.body.classList.contains('stats')?'':'<div class="mlab">Qué está pegando</div><p>'+d.pegando+'</p>'
   +'<div class="mlab">Qué se puede mejorar</div><p>'+d.mejorar+'</p>'
@@ -563,7 +564,7 @@ function mDrawFolBtn(b){mDrawFol(b.getAttribute('data-net'),b);}
 function mDrawEvo(net,btn){var d=window.DETAIL.chan[window._mchan];if(!d)return;if(btn){btn.parentElement.querySelectorAll('.fbtn').forEach(function(b){b.classList.remove('on');});btn.classList.add('on');}_mline('m-evo',d.evo.labels,d.evo[net],d.color);}
 function mDrawFol(net,btn){var d=window.DETAIL.chan[window._mchan];if(!d)return;if(btn){btn.parentElement.querySelectorAll('.fbtn').forEach(function(b){b.classList.remove('on');});btn.classList.add('on');}var vals=d.fol[net];document.getElementById('m-fol-note').textContent=_folNote(vals);_mline('m-fol',d.fol.labels,vals,d.color);}
 function openVideo(id,el){var v=window.DETAIL.video[id];if(!v)return;var d=window.DETAIL.chan[v.chan];
- var cover='';if(el){var c=el.querySelector('.vcover,.vcover-fb');if(c)cover=c.outerHTML.replace('class="vcover"','class="mcover"').replace('class="vcover-fb"','class="mcover"');}
+ var cover='';if(el){var c=el.querySelector('.vcover,.vcover-fb,.vthumb');if(c)cover=c.outerHTML.replace('class="vcover"','class="mcover"').replace('class="vcover-fb"','class="mcover"').replace('class="vthumb"','class="mcover"');}
  var pair='';if(v.evo)pair='<div class="mlab">Evolución · vistas por lectura</div><div class="mchart"><canvas id="m-vevo"></canvas></div><div id="m-vevo-fb"></div>';
  else if(v.pair)pair='<div class="mlab">Evolución · tarde → noche 23 nov</div><div class="mchart"><canvas id="m-pair"></canvas></div><div id="m-pair-fb"></div>';
  var h='<div class="mrow" style="--c:'+d.color+'">'+_mavatar(d)+'<div><h2 style="margin:0">'+d.name+'</h2><div class="note">'+v.net+' · '+v.level+'</div></div></div>'
