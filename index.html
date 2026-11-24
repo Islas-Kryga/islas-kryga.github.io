@@ -19,7 +19,7 @@ header{background:#101828;color:#fff;padding:22px 18px 16px}header h1{margin:0 0
 .net .nodata{color:#8a97a8;font-size:13px}
 .fbtns{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}
 .fbtn{border:1px solid #cdd5df;background:#eef2f6;border-radius:16px;padding:5px 11px;font-size:12.5px;cursor:pointer}
-.fbtn.on{background:#101828;color:#fff;border-color:#101828}
+.fbtn.on{background:var(--ncl,var(--nc,#101828));color:#fff;border-color:var(--ncl,var(--nc,#101828))}
 .bar-row{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:13px}
 .bar-row .lbl{width:210px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .bar-row .tr{flex:1;background:#e9eef3;border-radius:6px;height:18px;overflow:hidden}
@@ -35,7 +35,7 @@ header{background:#101828;color:#fff;padding:22px 18px 16px}header h1{margin:0 0
 .tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;color:#fff;margin-bottom:6px}
 .subtabs{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
 .stab{border:1px solid #cdd5df;background:#fff;border-radius:16px;padding:5px 12px;font-size:12.5px;cursor:pointer}
-.stab.on{background:#101828;color:#fff;border-color:#101828}
+.stab.on{background:var(--ncl,var(--nc,#101828));color:#fff;border-color:var(--ncl,var(--nc,#101828))}
 .sub{display:none}.sub.on{display:block}
 .note{font-size:12px;color:#5a6b7f}
 .hero{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
@@ -268,6 +268,105 @@ header h1{font-size:20px}.cover-head h1{font-size:24px}
 .tab{font-size:13px;padding:8px 12px}.tab .tav,.tab .tav-fb{width:22px;height:22px}
 .prox .k{width:110px}.cal-row{grid-template-columns:64px 1fr 70px;font-size:13.5px}
 }
+/* ---- v4: carruseles, selector de canales, modal, tira de días ---- */
+.carousel{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:4px 2px 10px;scrollbar-width:thin}
+.carousel>*{scroll-snap-align:start;flex:0 0 300px}
+.carousel::-webkit-scrollbar{height:6px}
+.carousel::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
+.car-wrap{position:relative}
+.car-nav{position:absolute;top:38%;z-index:3;width:34px;height:34px;border-radius:50%;border:1px solid #cdd5df;background:#fff;color:#1c2430;font-size:18px;font-weight:800;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);display:flex;align-items:center;justify-content:center}
+.car-nav.prev{left:-6px}.car-nav.next{right:-6px}
+.chan-nav{flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
+.chan-nav .tab{flex:none;scroll-snap-align:start}
+.chan-nav .tab.on{box-shadow:0 0 0 2px var(--c)}
+.daycard{border:1px solid #e2e8f0;border-top:5px solid var(--c,#888);border-radius:12px;padding:12px;background:#fff;cursor:pointer;text-align:left;width:100%}
+.daycard:hover{border-color:#101828}
+.daycard .dch{display:flex;gap:8px;align-items:center;font-weight:700;font-size:13.5px}
+.daycard .dch img{width:28px;height:28px;border-radius:50%;object-fit:cover;border:2px solid var(--c)}
+.daycard .dch .mini-av-fb{width:28px;height:28px;border-radius:50%;background:var(--c);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;border:2px solid var(--c)}
+.daycard .dt{font-size:13.5px;font-weight:600;margin:8px 0 2px;line-height:1.35}
+.daycard .dh{font-size:12.5px;color:#5a6b7f;font-weight:700}
+.daycard .dthumb{width:100%;height:110px;object-fit:cover;border-radius:8px;margin:8px 0 0}
+.daycard .dthumb-fb{width:100%;height:110px;border-radius:8px;background:var(--c);color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800;margin:8px 0 0}
+.daystrip{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;align-items:start}
+.daycol h3{margin:0 0 8px;font-size:15px;text-align:center}
+.daycol .daycard{margin-bottom:10px}
+.v4card{border:1px solid #e2e8f0;border-radius:12px;padding:14px;background:#fff;cursor:pointer}
+.v4card:hover{border-color:#101828}
+.v4card h4{margin:6px 0 2px;font-size:14.5px;line-height:1.35}
+.v4card .vv{font-size:13px;color:#5a6b7f}
+.v4card .one{font-size:13.5px;line-height:1.45;margin:6px 0 0}
+.v4card .one b{color:#0b7a45}
+.v4card .fix{font-size:13.5px;line-height:1.45;margin:4px 0 0}
+.v4card .fix b{color:#b45309}
+.v4card .vthumb,.v4card .vthumb-fb{width:100%;height:120px;min-height:120px;object-fit:cover}
+.v4card .vcover{width:100%;height:150px;object-fit:cover}
+.v4card .vcover-fb{width:100%;height:150px;min-height:150px}
+.sumcard{border:1px solid #e2e8f0;border-top:5px solid var(--c,#888);border-radius:12px;padding:12px;background:#fff;cursor:pointer}
+.sumcard:hover{border-color:#101828}
+.sumcard .sch{display:flex;gap:9px;align-items:center}
+.sumcard .sch img{width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid var(--c)}
+.sumcard .sch .mini-av-fb{width:38px;height:38px;border-radius:50%;background:var(--c);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:17px;font-weight:800;border:2px solid var(--c)}
+.sumcard .sn{font-weight:700;font-size:14px}
+.sumcard .sv{font-size:13px;margin-top:6px;line-height:1.4}
+.sumcard .sd{font-size:13px;font-weight:700;margin-top:4px}
+.sumcard .sf{font-size:12.5px;color:#5a6b7f;margin-top:2px}
+.modal-overlay{position:fixed;inset:0;background:rgba(15,23,42,.65);z-index:100;display:none;align-items:flex-start;justify-content:center;padding:24px 12px;overflow-y:auto}
+.modal-overlay.open{display:flex}
+.modal-panel{background:#fff;color:#1c2430;border-radius:16px;max-width:640px;width:100%;padding:22px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.modal-close{position:absolute;top:10px;right:12px;border:1px solid #cdd5df;background:#eef2f6;border-radius:50%;width:32px;height:32px;font-size:16px;cursor:pointer}
+.modal-panel h2{margin:0 0 4px;font-size:20px}
+.modal-panel .mrow{display:flex;gap:10px;align-items:center;margin:10px 0}
+.modal-panel .mrow img{width:56px;height:56px;border-radius:50%;object-fit:cover;border:3px solid var(--c,#888)}
+.modal-panel .mrow .mini-av-fb{width:56px;height:56px;border-radius:50%;background:var(--c,#888);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;border:3px solid var(--c,#888)}
+.modal-panel .mchart{height:200px;margin-top:8px}
+.modal-panel .mcover{width:100%;max-height:300px;object-fit:cover;border-radius:10px;margin:10px 0}
+.modal-panel .mlab{font-size:11.5px;text-transform:uppercase;letter-spacing:.5px;color:#5a6b7f;font-weight:700;margin-top:14px}
+.modal-panel p{font-size:14.5px;line-height:1.55;margin:6px 0}
+.modal-panel .mtable{width:100%;border-collapse:collapse;font-size:14px;margin-top:8px}
+.modal-panel .mtable td,.modal-panel .mtable th{padding:8px 6px;border-bottom:1px solid #eef2f6;text-align:left;vertical-align:top}
+.pay-table{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:12px}
+.pay-table th{text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:.5px;color:#5a6b7f;padding:8px 10px;border-bottom:2px solid #e2e8f0}
+.pay-table td{padding:12px 10px;border-bottom:1px solid #eef2f6;vertical-align:middle;line-height:1.4}
+.pay-table tr:last-child td{border-bottom:0}
+.pay-table .pay-net{display:flex;gap:9px;align-items:center;font-weight:700;white-space:nowrap}
+.pay-table .pay-net svg{flex:none}
+.pay-table .pay{font-weight:800;font-size:16px;white-space:nowrap;color:var(--nc,#1c2430)}
+.pay-table .cond{font-size:13px;color:#5a6b7f}
+.sim-rows{margin-top:12px}
+.sim-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #eef2f6;font-size:14px}
+.sim-row:last-child{border-bottom:0}
+.sim-row .snet{display:flex;gap:8px;align-items:center;width:170px;flex:none;font-weight:700}
+.sim-row .snet svg{flex:none}
+.sim-row .samt{margin-left:auto;font-weight:800;white-space:nowrap;font-variant-numeric:tabular-nums}
+.sim-row .sbar{flex:1;height:12px;background:#e9eef3;border-radius:6px;overflow:hidden}
+.sim-row .sfill{height:100%;border-radius:6px}
+@media(max-width:820px){.daystrip{grid-template-columns:repeat(3,1fr)}.carousel>*{flex-basis:270px}}
+@media(max-width:640px){
+.daystrip{grid-template-columns:repeat(2,1fr)}
+.carousel>*{flex-basis:250px}
+.car-nav{display:none}
+.sim-row .snet{width:130px}
+.modal-panel{padding:16px}
+}
+/* ---- Contraste botones de red/canal (v4): nunca negro ilegible ---- */
+.tab.on[style*="#1A1A1A"]{background:#4b5563;border-color:#4b5563}
+.tag[style*="#1A1A1A"]{background:#4b5563}
+.fbtn,.stab{font-weight:600}
+.fbtn.on,.stab.on{color:#fff;font-weight:700}
+html[data-theme="dark"] .fbtn.on,html[data-theme="dark"] .stab.on{background:var(--nc,#38bdf8);color:#fff;border-color:var(--nc,#38bdf8)}
+html[data-theme="dark"] .car-nav{background:#1e293b;border-color:#475569;color:#e2e8f0}
+html[data-theme="dark"] .daycard,html[data-theme="dark"] .v4card,html[data-theme="dark"] .sumcard,html[data-theme="dark"] .modal-panel{background:#1e293b;border-color:#334155;color:#e2e8f0}
+html[data-theme="dark"] .daycard .dh,html[data-theme="dark"] .v4card .vv,html[data-theme="dark"] .sumcard .sf{color:#94a3b8}
+html[data-theme="dark"] .modal-panel .mlab{color:#94a3b8}
+html[data-theme="dark"] .modal-panel .mtable td,html[data-theme="dark"] .modal-panel .mtable th{border-color:#334155}
+html[data-theme="dark"] .modal-close{background:#0f172a;border-color:#475569;color:#e2e8f0}
+html[data-theme="dark"] .pay-table th{color:#94a3b8;border-color:#334155}
+html[data-theme="dark"] .pay-table td{border-color:#1e293b}
+html[data-theme="dark"] .pay-table .cond{color:#94a3b8}
+html[data-theme="dark"] .sim-row{border-color:#1e293b}
+html[data-theme="dark"] .sim-row .sbar{background:#334155}
+html[data-theme="dark"] .carousel::-webkit-scrollbar-thumb{background:#475569}
 </style><script>try{var t=localStorage.getItem('theme');if(!t)t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}</script></head><body>
 <header class="cover-head"><div class="wrap"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar entre modo claro y oscuro">🌙 Oscuro</button><h1>📺 Canales de Julio — Estadísticas y Análisis</h1>
 <p class="lede">El panel de los 8 canales de Julio en Instagram, Facebook, YouTube y Threads: qué está pasando con cada video, cuál pegó, cuál no, y qué se puede mejorar. Se actualiza dos veces al día, en la mañana y en la noche.</p>
@@ -288,7 +387,7 @@ header h1{font-size:20px}.cover-head h1{font-size:24px}
 
 <div class="section"><h2>📰 Novedades — la noche del 23 nov</h2>
 <p class="sub">Lo que se movió hoy, con los números de la lectura nocturna (~21:00 CST; YouTube leído 21:12–21:16).</p>
-<ul class="news"><li>🔥 <b>El Cuerpo Habla — gasometría imparable:</b> 73,945 vistas en IG (+19,511 hoy), 3,265 likes, 2,966 saves, 934 shares… y +102 seguidores (358 → 460). El mayor salto del día en los 8 canales.</li><li>🚪 <b>Instinto de Tigre — pie-en-la-puerta 3D, viral de la noche:</b> FB 366 (+112) e IG 140 (+28) en un día. La versión 3D ya supera en Facebook a casi todo el catálogo viejo.</li><li>📈 <b>Gta6mx — «No lo mires fijo» sigue creciendo:</b> 1,432 vistas en IG (+283): el video viejo con más crecimiento del día en todos los canales.</li><li>🎥 <b>YouTube — Stickman ep01 es el más visto de todos:</b> «Lo perfecto espera… pero lo constante llega»: 7,333 vistas en 28 días. Ningún otro video de los 8 canales llega a eso en YouTube.</li><li>🆕 <b>Sirio Code — primer día:</b> Facebook 457 vistas ya supera a Instagram (18). Primer seguidor en Facebook. El video que más jala es el del doctor y el paciente que no llega (254).</li><li>📖 <b>El Rugido de la Fe — biblia-ep05 sigue creciendo:</b> IG 164 (+24): el video nuevo con más crecimiento de la noche en Instagram. El molde «la Biblia NO lo dice» sigue siendo el motor.</li></ul></div>
+<ul class="news"><li>🔥 <b>El Cuerpo Habla — gasometría:</b> 73,945 vistas en IG (+19,511 hoy) · +102 seguidores</li><li>🚪 <b>Instinto de Tigre — pie 3D:</b> FB 366 (+112) e IG 140 (+28) en un día</li><li>📈 <b>Gta6mx — «No lo mires fijo»:</b> 1,432 vistas en IG (+283, el que más creció hoy)</li><li>🎥 <b>YouTube — Stickman ep01:</b> 7,333 vistas en 28 días, el #1 de los 8 canales</li><li>🆕 <b>Sirio Code — primer día:</b> FB 457 vistas vs IG 18 · primer seguidor en FB</li><li>📖 <b>El Rugido de la Fe — biblia-ep05:</b> IG 164 (+24, el nuevo que más crece)</li></ul></div>
 
 <div class="section"><h2>Los 8 canales</h2>
 <p class="sub">Las fotos de perfil de cada canal — pícale a uno para ver sus números en Estadísticas.</p>
