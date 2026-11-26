@@ -788,7 +788,7 @@ function openVideo(id,el){var v=window.DETAIL.video[id];if(!v)return;var d=windo
   +(v.why?'<div class="msec m-why"><div class="mlab">'+((v.level||'').indexOf('🔻')===0?'🔻 Por qué no pegó':'✅ Por qué pegó')+'</div><p>'+v.why+'</p></div>':'')
   +(v.lacked?'<div class="msec m-lack"><div class="mlab">⚠️ Le faltó</div><p>'+v.lacked+'</p></div>':'')
   +(v.improve?'<div class="msec m-fix"><div class="mlab">🔧 ¿Cómo se mejora?</div><p>'+v.improve+'</p></div>':'')
-  +(v.hook&&v.hook!=='—'?'<div class="msec m-hook"><div class="mlab">🆕 Nuevo texto</div><p>'+v.hook+'</p></div>':'')+pair+_vnav(id,v);
+  +(v.hook&&v.hook!=='—'?'<div class="msec m-hook"><div class="mlab">🆕 Nuevo texto</div><p>'+v.hook+'</p></div>':'')+pair+(document.body.classList.contains('analisis')?_vnav(id,v):'');
  _mopen(h);var mp=document.getElementById('modal-panel');if(mp)mp.scrollTop=0;if(v.evo)_mline('m-vevo',v.evo.labels,v.evo.values,d.color);else if(v.pair)_mline('m-pair',['mañana 25 nov','tarde 25 nov'],v.pair,d.color);}
 function openCal(id){var c=window.DETAIL.cal[id];if(!c)return;var d=window.DETAIL.chan[c.chan];
  var h='<div class="mrow" style="--c:'+d.color+'">'+_mavatar(d)+'<div><h2 style="margin:0">'+d.name+'</h2><div class="note">'+c.day+' · 🕐 '+c.hora+'</div></div></div>'
