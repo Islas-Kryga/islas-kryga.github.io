@@ -18,7 +18,7 @@ header{background:#101828;color:#fff;padding:22px 18px 16px}header h1{margin:0 0
 .card h2{margin:0 0 2px;font-size:18px}.card h2 small{color:#5a6b7f;font-weight:400;font-size:13px}
 .nets{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin:12px 0}
 .net{border:1px solid #e2e8f0;border-top:4px solid var(--c,#888);border-radius:10px;padding:10px 12px;background:#fff}
-.net h3{margin:0 0 4px;font-size:14px}.net .big{font-size:22px;font-weight:700}.net .lab{font-size:11px;color:#5a6b7f;text-transform:uppercase;letter-spacing:.4px}
+.net h3{margin:0 0 4px;font-size:14px;display:flex;align-items:center;gap:6px}.net h3 svg{flex:none}.net .big{font-size:22px;font-weight:700}.net .lab{font-size:11px;color:#5a6b7f;text-transform:uppercase;letter-spacing:.4px}
 .net .top{font-size:12.5px;margin-top:6px}.net .trend{font-size:12px;color:#0b7a45;font-weight:600}
 .net .nodata{color:#8a97a8;font-size:13px}
 .fbtns{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}
@@ -401,10 +401,21 @@ html[data-theme="dark"] .netcard2 .mb-row .mbt{background:#334155}
 .sumcard .sv{font-size:13px;margin-top:6px;line-height:1.4}
 .sumcard .sd{font-size:13px;font-weight:700;margin-top:4px}
 .sumcard .sf{font-size:12.5px;color:#5a6b7f;margin-top:2px}
-.modal-overlay{position:fixed;inset:0;background:rgba(15,23,42,.65);z-index:100;display:none;align-items:flex-start;justify-content:center;padding:24px 12px;overflow-y:auto}
+.modal-overlay{position:fixed;inset:0;background:rgba(15,23,42,.65);z-index:100;display:none;align-items:center;justify-content:center;padding:24px 12px;overflow-y:auto}
 .modal-overlay.open{display:flex}
-.modal-panel{background:#fff;color:#1c2430;border-radius:16px;max-width:640px;width:100%;padding:22px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.modal-panel{background:#fff;color:#1c2430;border-radius:16px;max-width:640px;width:100%;padding:22px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.35);margin:auto;max-height:calc(100vh - 48px);overflow-y:auto}
 .modal-close{position:absolute;top:10px;right:12px;border:1px solid #cdd5df;background:#eef2f6;border-radius:50%;width:32px;height:32px;font-size:16px;cursor:pointer}
+.tip-nav{display:flex;align-items:center;justify-content:space-between;margin-top:18px;padding-top:14px;border-top:1px solid #eef2f6}
+.tip-nav-btn{border:1px solid #cdd5df;background:#eef2f6;border-radius:50%;width:40px;height:40px;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex:none}
+.tip-count{font-size:13px;color:#5a6b7f;font-weight:700}
+html[data-theme="dark"] .tip-nav{border-color:#334155}
+html[data-theme="dark"] .tip-nav-btn{background:#0f172a;border-color:#475569;color:#e2e8f0}
+html[data-theme="dark"] .tip-count{color:#94a3b8}
+.mex{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:10px}
+.mex li{display:flex;gap:9px;align-items:flex-start;font-size:14px;line-height:1.5}
+.mex-n{flex:none;width:22px;height:22px;border-radius:50%;background:#101828;color:#fff;font-size:12px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;margin-top:1px}
+.mex-src{font-size:12px;color:#5a6b7f;font-weight:600;margin-top:2px}
+html[data-theme="dark"] .mex-src{color:#94a3b8}
 .modal-panel h2{margin:0 0 4px;font-size:20px}
 .modal-panel .mrow{display:flex;gap:10px;align-items:center;margin:10px 0}
 .modal-panel .mrow img{width:56px;height:56px;border-radius:50%;object-fit:cover;border:3px solid var(--c,#888)}
