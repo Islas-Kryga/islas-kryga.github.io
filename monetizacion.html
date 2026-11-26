@@ -12,7 +12,7 @@ header{background:#101828;color:#fff;padding:22px 18px 16px}header h1{margin:0 0
 .pill .pill-h b{font-size:13px}
 .tabs{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 12px}
 .tab{border:1px solid #cdd5df;background:#fff;border-radius:20px;padding:7px 13px;font-size:13px;cursor:pointer;white-space:nowrap}
-.tab.on{background:var(--c,#101828);color:#fff;border-color:var(--c,#101828)}
+.tab.on{background:#101828;color:#fff;border-color:#101828}
 .panel{display:none}.panel.on{display:block}
 .card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:14px;margin:0 0 12px}
 .card h2{margin:0 0 2px;font-size:18px}.card h2 small{color:#5a6b7f;font-weight:400;font-size:13px}
@@ -24,24 +24,24 @@ header{background:#101828;color:#fff;padding:22px 18px 16px}header h1{margin:0 0
 .fbtns{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}
 .fbtn{border:1px solid #cdd5df;background:#eef2f6;border-radius:16px;padding:5px 11px;font-size:12.5px;cursor:pointer;white-space:nowrap}
 .fbtn svg{vertical-align:-2px;margin-right:3px;color:var(--nc,currentColor)}
-.fbtn.on{background:var(--ncl,var(--nc,#101828));color:#fff;border-color:var(--ncl,var(--nc,#101828))}
+.fbtn.on{background:#101828;color:#fff;border-color:#101828}
 .fbtn.on svg{color:#fff}
 .bar-row{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:13px}
 .bar-row .lbl{width:210px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .bar-row .tr{flex:1;background:#e9eef3;border-radius:6px;height:18px;overflow:hidden}
-.bar-row .fl{height:100%;background:var(--c,#2E86C1);background:linear-gradient(90deg,var(--c,#2E86C1),color-mix(in srgb,var(--c,#2E86C1) 55%,#fff));border-radius:10px}
+.bar-row .fl{height:100%;background:var(--c,#2E86C1);border-radius:10px}
 .bar-row .val{width:70px;text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
 .mono{font-variant-numeric:tabular-nums}
 .prog{margin:8px 0}.prog .pl{display:flex;justify-content:space-between;font-size:12.5px}.prog .tr{height:10px;background:#e9eef3;border-radius:6px;overflow:hidden}.prog .fl{height:100%;background:#16a34a}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 @media(max-width:640px){.two{grid-template-columns:1fr}.bar-row .lbl{width:130px}}
 .good{border-left:4px solid #16a34a}.bad{border-left:4px solid #dc2626}.mid{border-left:4px solid #d97706}
-.hook{background:#fef9c3;border:1px dashed #d97706;border-radius:8px;padding:8px 10px;font-size:13px;margin-top:8px}
+.hook{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:8px 10px;font-size:13px;margin-top:8px}
 .hook b{color:#92400e}
 .tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:12px;color:#fff;margin-bottom:6px}
 .subtabs{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
 .stab{border:1px solid #cdd5df;background:#fff;border-radius:16px;padding:5px 12px;font-size:12.5px;cursor:pointer;white-space:nowrap}
-.stab.on{background:var(--ncl,var(--nc,#101828));color:#fff;border-color:var(--ncl,var(--nc,#101828))}
+.stab.on{background:#101828;color:#fff;border-color:#101828}
 .sub{display:none}.sub.on{display:block}
 .note{font-size:12px;color:#5a6b7f}
 .hero{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
@@ -143,7 +143,7 @@ html[data-theme="dark"] .hours-table td{border-color:#334155}
 html[data-theme="dark"] .hours-table .hevi{color:#cbd5e1}
 @media(max-width:640px){.hours-table{font-size:12.5px}.hours-table th,.hours-table td{padding:8px 7px}.htav,.htav-fb{width:26px;height:26px}.hours-table .hchan{gap:6px}}
 html[data-theme="dark"] .top-list li,html[data-theme="dark"] .bullets li{border-color:#1e293b}
-html[data-theme="dark"] .hook{background:#422006;border-color:#92400e;color:#fde68a}
+html[data-theme="dark"] .hook{background:#0f172a;border-color:#334155;color:#e2e8f0}
 html[data-theme="dark"] .hook b{color:#fcd34d}
 html[data-theme="dark"] a{color:#7aa5ff}
 html[data-theme="dark"] .chcard .golinks a,html[data-theme="dark"] .bigcard .go{color:#7aa5ff}
@@ -212,6 +212,18 @@ html[data-theme="dark"] .warn{background:#450a0a;border-color:#7f1d1d}
 .viral .vthumb-fb{height:96px;font-size:11.5px}
 .vthumb{width:64px;flex:none;border-radius:8px;border:1px solid #e2e8f0;display:block}
 .vthumb-fb{width:64px;flex:none;min-height:100px;border-radius:8px;background:var(--c);color:#fff;display:flex;align-items:center;justify-content:center;padding:6px;font-size:11px;font-weight:700;text-align:center;line-height:1.3;overflow:hidden;overflow-wrap:break-word;word-break:break-word}
+.vthumb-av-slot{flex:none;display:flex;align-items:center;justify-content:center}
+.netcard2 .nr-row .vthumb-av-slot{width:64px;min-height:114px;margin:0}
+.v4card .vthumb-av-slot{width:100%;height:150px}
+.viral .vthumb-av-slot{width:100%;height:96px}
+.netcard .vthumb-av-slot{width:100%;height:150px}
+.vthumb-av{width:64px;height:64px;border-radius:50%;object-fit:cover;border:2px solid var(--c,#888);display:block;flex:none}
+.v4card .vthumb-av,.netcard .vthumb-av{width:96px;height:96px}
+.vthumb-av-fb{background:var(--c,#888);color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800}
+.v4card .vthumb-av-fb,.netcard .vthumb-av-fb{font-size:36px}
+.modal-panel .mcover-av-slot{display:flex;align-items:center;justify-content:center;margin:10px 0}
+.modal-panel .mcover-av-slot .vthumb-av{width:120px;height:120px}
+.modal-panel .mcover-av-slot .vthumb-av-fb{font-size:44px}
 .trend-up{color:#0b7a45;font-weight:700;white-space:nowrap}
 .trend-down{color:#dc2626;font-weight:700;white-space:nowrap}
 .trend-flat{color:#5a6b7f;font-weight:700;white-space:nowrap}
@@ -284,8 +296,8 @@ html[data-theme="dark"] .cal-row{border-color:#1e293b}
 html[data-theme="dark"] .goal-card{background:#1e293b;border-color:#334155},html[data-theme="dark"] .goal-lab,html[data-theme="dark"] .goal-num span{color:#94a3b8}
 html[data-theme="dark"] .sim-btn{background:#1e293b;border-color:#475569;color:#e2e8f0}
 html[data-theme="dark"] .sim-btn.on{background:#38bdf8;color:#0f172a;border-color:#38bdf8}
-html[data-theme="dark"] .fbtn.on,html[data-theme="dark"] .stab.on{background:var(--nc,#38bdf8);color:#fff;border-color:var(--nc,#38bdf8)}
-html[data-theme="dark"] .tab.on{box-shadow:0 0 0 2px var(--c)}
+html[data-theme="dark"] .fbtn.on,html[data-theme="dark"] .stab.on{background:#e2e8f0;color:#0f172a;border-color:#e2e8f0}
+html[data-theme="dark"] .tab.on{background:#e2e8f0;color:#0f172a;border-color:#e2e8f0;box-shadow:0 0 0 2px var(--c)}
 html[data-theme="dark"] .avatar{border-color:var(--c)}
 html[data-theme="dark"] .net{border-top-color:var(--c)}
 html[data-theme="dark"] .pill{border-left-color:var(--c)}
@@ -332,7 +344,7 @@ header h1{font-size:20px}.cover-head h1{font-size:24px}
 .netcard2 .neth{display:flex;gap:8px;align-items:center;font-weight:800;font-size:15px}
 .netcard2 .neth svg{flex:none}
 .netcard2 .nth{width:100%;height:110px;object-fit:contain;background:#101828;border-radius:8px;margin:10px 0 0}
-.netcard2 .nr-row{display:flex;gap:10px;align-items:flex-start;margin:10px 0 0}
+.netcard2 .nr-row{display:flex;gap:10px;align-items:flex-start;margin:10px 0 0;cursor:pointer}
 .netcard2 .nr-row .vthumb{width:64px;flex:none;height:114px;object-fit:contain;background:#101828;margin:0}
 .netcard2 .nr-row .vthumb-fb{width:64px;flex:none;min-height:114px;margin:0;font-size:10px;padding:4px}
 .netcard2 .nr-row .nv{margin:0;flex:1;min-width:0}
@@ -480,60 +492,28 @@ html[data-theme="dark"] .netcard .nsec .vv{color:#94a3b8}
 /* ---- Top videos por red: pestañas con logo de red (claro/oscuro) ---- */
 .fbtn svg{color:var(--nc,currentColor)}
 .fbtn.on svg{color:#fff}
-/* ---- Modal: secciones con color propio (detalle de video y próximo video) ---- */
+/* ---- Modal: secciones neutras, sin tintes de color ---- */
 .modal-panel .msec,.modal-panel .mfield{border-radius:10px;padding:10px 12px;margin-top:12px;border-left:4px solid #888}
 .modal-panel .msec .mlab,.modal-panel .mfield .mlab{margin-top:0}
 .modal-panel .msec p,.modal-panel .mfield p{margin:4px 0 0}
-.msec.m-why{background:#f0fdf4;border-color:#16a34a}.msec.m-why .mlab{color:#15803d}
-.msec.m-lack{background:#fffbeb;border-color:#d97706}.msec.m-lack .mlab{color:#b45309}
-.msec.m-fix{background:#eff6ff;border-color:#2563eb}.msec.m-fix .mlab{color:#1d4ed8}
-.msec.m-hook{background:#faf5ff;border-color:#7c3aed}.msec.m-hook .mlab{color:#6d28d9}
-.msec.m-evo{background:#f0fdfa;border-color:#0891b2}.msec.m-evo .mlab{color:#0e7490}
-.mfield.f-tema{background:#eef2ff;border-color:#4f46e5}.mfield.f-tema .mlab{color:#4338ca}
-.mfield.f-gancho{background:#fff1f2;border-color:#e11d48}.mfield.f-gancho .mlab{color:#be123c}
-.mfield.f-formato{background:#eff6ff;border-color:#2563eb}.mfield.f-formato .mlab{color:#1d4ed8}
-.mfield.f-dur{background:#f0fdfa;border-color:#0d9488}.mfield.f-dur .mlab{color:#0f766e}
-.mfield.f-red{background:#f0fdf4;border-color:#16a34a}.mfield.f-red .mlab{color:#15803d}
-.mfield.f-no{background:#fef2f2;border-color:#dc2626}.mfield.f-no .mlab{color:#b91c1c}
-html[data-theme="dark"] .msec.m-why{background:rgba(22,163,74,.14);border-color:#22c55e}
-html[data-theme="dark"] .msec.m-why .mlab{color:#4ade80}
-html[data-theme="dark"] .msec.m-lack{background:rgba(217,119,6,.14);border-color:#f59e0b}
-html[data-theme="dark"] .msec.m-lack .mlab{color:#fbbf24}
-html[data-theme="dark"] .msec.m-fix{background:rgba(37,99,235,.16);border-color:#3b82f6}
-html[data-theme="dark"] .msec.m-fix .mlab{color:#60a5fa}
-html[data-theme="dark"] .msec.m-hook{background:rgba(124,58,237,.16);border-color:#8b5cf6}
-html[data-theme="dark"] .msec.m-hook .mlab{color:#a78bfa}
-html[data-theme="dark"] .msec.m-evo{background:rgba(8,145,178,.16);border-color:#06b6d4}
-html[data-theme="dark"] .msec.m-evo .mlab{color:#2dd4bf}
-html[data-theme="dark"] .mfield.f-tema{background:rgba(79,70,229,.16);border-color:#6366f1}
-html[data-theme="dark"] .mfield.f-tema .mlab{color:#818cf8}
-html[data-theme="dark"] .mfield.f-gancho{background:rgba(225,29,72,.16);border-color:#f43f5e}
-html[data-theme="dark"] .mfield.f-gancho .mlab{color:#fb7185}
-html[data-theme="dark"] .mfield.f-formato{background:rgba(37,99,235,.16);border-color:#3b82f6}
-html[data-theme="dark"] .mfield.f-formato .mlab{color:#60a5fa}
-html[data-theme="dark"] .mfield.f-dur{background:rgba(13,148,136,.16);border-color:#14b8a6}
-html[data-theme="dark"] .mfield.f-dur .mlab{color:#2dd4bf}
-html[data-theme="dark"] .mfield.f-red{background:rgba(22,163,74,.14);border-color:#22c55e}
-html[data-theme="dark"] .mfield.f-red .mlab{color:#4ade80}
-html[data-theme="dark"] .mfield.f-no{background:rgba(220,38,38,.16);border-color:#ef4444}
-html[data-theme="dark"] .mfield.f-no .mlab{color:#f87171}
+.msec.m-why,.msec.m-lack,.msec.m-fix,.msec.m-hook,.msec.m-evo,.mfield.f-tema,.mfield.f-gancho,.mfield.f-formato,.mfield.f-dur,.mfield.f-red,.mfield.f-no{background:#f8fafc;border:1px solid #e2e8f0;border-left:3px solid #101828}
+.msec.m-why .mlab,.msec.m-lack .mlab,.msec.m-fix .mlab,.msec.m-hook .mlab,.msec.m-evo .mlab,.mfield.f-tema .mlab,.mfield.f-gancho .mlab,.mfield.f-formato .mlab,.mfield.f-dur .mlab,.mfield.f-red .mlab,.mfield.f-no .mlab{color:#475569}
+html[data-theme="dark"] .msec.m-why,html[data-theme="dark"] .msec.m-lack,html[data-theme="dark"] .msec.m-fix,html[data-theme="dark"] .msec.m-hook,html[data-theme="dark"] .msec.m-evo,html[data-theme="dark"] .mfield.f-tema,html[data-theme="dark"] .mfield.f-gancho,html[data-theme="dark"] .mfield.f-formato,html[data-theme="dark"] .mfield.f-dur,html[data-theme="dark"] .mfield.f-red,html[data-theme="dark"] .mfield.f-no{background:#0f172a;border:1px solid #334155;border-left:3px solid #64748b}
+html[data-theme="dark"] .msec .mlab,html[data-theme="dark"] .mfield .mlab{color:#94a3b8}
 /* ---- La receta por red: tarjeta con identidad de marca ---- */
-.recipe-card{border:1px solid #e2e8f0;border-top:5px solid var(--nc,#888);border-radius:12px;padding:14px;background:color-mix(in srgb,var(--nc,#888) 7%,#fff);transition:transform .18s ease,box-shadow .18s ease}
+.recipe-card{border:1px solid #e2e8f0;border-top:3px solid var(--nc,#888);border-radius:12px;padding:14px;background:#fff;transition:transform .18s ease,box-shadow .18s ease}
 .recipe-card:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(15,23,42,.14)}
 .recipe-card .rc-head{display:flex;align-items:center;gap:8px;font-weight:800;font-size:16px;color:var(--nc,#1c2430)}
 .recipe-card .rc-head svg{flex:none}
 .recipe-card .q{font-size:13.5px;color:#5a6b7f;margin:0 0 8px}
 .recipe-card ol{margin:8px 0;padding-left:18px;font-size:14px;line-height:1.55}
 .recipe-card .ej{background:#f8fafc;border-radius:8px;padding:10px;font-size:13.5px;line-height:1.5;margin-top:10px}
-html[data-theme="dark"] .recipe-card{background:color-mix(in srgb,var(--nc,#888) 16%,#1e293b);border-color:#334155}
+html[data-theme="dark"] .recipe-card{background:#1e293b;border-color:#334155}
 html[data-theme="dark"] .recipe-card .q{color:#94a3b8}
 html[data-theme="dark"] .recipe-card .ej{background:#0f172a}
 /* ---- Identidad por apartado (analisis): fondo tenue + sombra + movimiento sutil ---- */
 body.analisis .card{box-shadow:0 1px 3px rgba(15,23,42,.08),0 4px 14px rgba(15,23,42,.05);animation:fadeUp .45s ease both}
-body.analisis .card.sec-pegando{background:#f0fdf4}
-body.analisis .card.sec-proximo{background:#f5f3ff}
-body.analisis .card.sec-receta{background:#eff6ff}
-body.analisis .card.sec-horas{background:#ecfeff}
+body.analisis .card.sec-pegando,body.analisis .card.sec-proximo,body.analisis .card.sec-receta,body.analisis .card.sec-horas{background:#fff}
 body.analisis .card.sec-glosario{background:#f8fafc}
 body.analisis .v4card{transition:transform .18s ease,box-shadow .18s ease}
 body.analisis .v4card:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(15,23,42,.14)}
@@ -553,7 +533,7 @@ html[data-theme="dark"] body.analisis .v4card:hover{box-shadow:0 8px 22px rgba(0
 .formula-box .f-ex .f-views{color:#5a6b7f;font-weight:600;white-space:nowrap}
 .formula-box .f-steps{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px}
 .formula-box .f-steps li{display:flex;gap:8px;align-items:flex-start;font-size:14px;line-height:1.45}
-.formula-box .f-num{flex:none;width:22px;height:22px;border-radius:50%;background:var(--c,#888);color:#fff;font-size:12px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;margin-top:1px}
+.formula-box .f-num{flex:none;width:22px;height:22px;border-radius:50%;background:#101828;color:#fff;font-size:12px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;margin-top:1px}
 html[data-theme="dark"] .formula-box{background:#0f172a;border-color:#334155}
 html[data-theme="dark"] .formula-box .f-ex .f-views{color:#94a3b8}
 /* ---- Hora ideal: logo de red en línea en la evidencia ---- */
@@ -649,7 +629,7 @@ function mDrawFolBtn(b){mDrawFol(b.getAttribute('data-net'),b);}
 function mDrawEvo(net,btn){var d=window.DETAIL.chan[window._mchan];if(!d)return;if(btn){btn.parentElement.querySelectorAll('.fbtn').forEach(function(b){b.classList.remove('on');});btn.classList.add('on');}_mline('m-evo',d.evo.labels,d.evo[net],d.color);}
 function mDrawFol(net,btn){var d=window.DETAIL.chan[window._mchan];if(!d)return;if(btn){btn.parentElement.querySelectorAll('.fbtn').forEach(function(b){b.classList.remove('on');});btn.classList.add('on');}var vals=d.fol[net];document.getElementById('m-fol-note').textContent=_folNote(vals);_mline('m-fol',d.fol.labels,vals,d.color);}
 function openVideo(id,el){var v=window.DETAIL.video[id];if(!v)return;var d=window.DETAIL.chan[v.chan];
- var cover='';if(el){var c=el.querySelector('.vcover,.vcover-fb,.vthumb');if(c)cover=c.outerHTML.replace('class="vcover"','class="mcover"').replace('class="vcover-fb"','class="mcover"').replace('class="vthumb"','class="mcover"');}
+ var cover='';if(el){var c=el.querySelector('.vcover,.vcover-fb,.vthumb,.vthumb-av-slot');if(c)cover=c.outerHTML.replace('class="vcover"','class="mcover"').replace('class="vcover-fb"','class="mcover"').replace('class="vthumb"','class="mcover"').replace('class="vthumb-av-slot"','class="mcover-av-slot"');}
  var pair='';if(v.evo)pair='<div class="msec m-evo"><div class="mlab">📈 Evolución · vistas por lectura</div><div class="mchart"><canvas id="m-vevo"></canvas></div><div id="m-vevo-fb"></div></div>';
  else if(v.pair)pair='<div class="msec m-evo"><div class="mlab">📈 Evolución · mañana 25 nov → tarde 25 nov</div>'+'<div class="mchart"><canvas id="m-pair"></canvas></div><div id="m-pair-fb"></div></div>';
  var h='<div class="mrow" style="--c:'+d.color+'">'+_mavatar(d)+'<div><h2 style="margin:0">'+d.name+'</h2><div class="note">'+v.net+' · '+v.level+'</div></div></div>'
