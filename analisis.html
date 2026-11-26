@@ -19,10 +19,10 @@ header{background:#101828;color:#fff;padding:22px 18px 16px}header h1{margin:0 0
 .panel{display:none}.panel.on{display:block}
 .card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:14px;margin:0 0 12px;box-shadow:0 1px 3px rgba(15,23,42,.06),0 12px 30px rgba(15,23,42,.09)}
 .card h2{margin:0 0 2px;font-size:24px;font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:700;letter-spacing:-.01em;text-shadow:0 1px 2px rgba(15,23,42,.14)}.card h2 small{color:#3d4a5c;font-weight:400;font-size:13px}
-.card>h3,.section>h3,.bigcard>h3{font-family:'Fraunces',Georgia,serif;font-size:24px;font-style:italic;font-weight:700;letter-spacing:-.01em;text-shadow:0 1px 2px rgba(15,23,42,.14)}
+.card h3,.section h3,.bigcard h3{font-family:'Fraunces',Georgia,serif;font-size:24px;font-style:italic;font-weight:700;letter-spacing:-.01em;text-shadow:0 1px 2px rgba(15,23,42,.14)}
 .nets{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin:12px 0}
 .net{border:1px solid #e2e8f0;border-top:4px solid var(--c,#888);border-radius:10px;padding:10px 12px;background:#fff;box-shadow:0 1px 3px rgba(15,23,42,.05),0 6px 16px rgba(15,23,42,.05)}
-.net h3{margin:0 0 4px;font-size:14px;display:flex;align-items:center;gap:6px}.net h3 svg{flex:none}.net .big{font-size:22px;font-weight:700}.net .lab{font-size:12px;color:#3d4a5c;text-transform:uppercase;letter-spacing:.4px}
+.net h3{margin:0 0 4px;font-size:14px;display:flex;align-items:center;gap:6px;font-family:inherit;font-style:normal}.net h3 svg{flex:none}.net .big{font-size:22px;font-weight:700}.net .lab{font-size:12px;color:#3d4a5c;text-transform:uppercase;letter-spacing:.4px}
 .net .top{font-size:12.5px;margin-top:6px}.net .trend{font-size:12px;color:#0b7a45;font-weight:600}
 .net .nodata{color:#3d4a5c;font-size:13px}
 html[data-theme="dark"] .net .nodata{color:#cbd5e1}
@@ -82,7 +82,7 @@ html[data-theme="dark"] .news .news-bullets li{background:#0f172a;border-color:#
 /* ---- Estadísticas v4: tipografía grande, aire, fotos, tablas ---- */
 body.stats .card{padding:22px;margin-bottom:22px}
 body.stats .card h2{font-size:24px}
-body.stats .card>h3{font-size:24px}
+body.stats .card h3{font-size:24px}
 body.stats .strip{gap:10px;margin:18px 0}
 body.stats .pill{padding:12px 14px;font-size:13px}
 body.stats .tabs{gap:8px;margin:22px 0 18px}
@@ -131,7 +131,7 @@ html[data-theme="dark"] body{background:#0f172a;color:#e2e8f0}
 html[data-theme="dark"] header{background:#0b1220}
 html[data-theme="dark"] .card,html[data-theme="dark"] .net,html[data-theme="dark"] .pill,html[data-theme="dark"] .bigcard,html[data-theme="dark"] .chcard,html[data-theme="dark"] .news li{background:#1e293b;border-color:#334155;color:#e2e8f0}
 html[data-theme="dark"] .card{box-shadow:0 8px 26px rgba(0,0,0,.45)}
-html[data-theme="dark"] .card h2,html[data-theme="dark"] .section h2,html[data-theme="dark"] .bigcard h2,html[data-theme="dark"] .card>h3,html[data-theme="dark"] .section>h3,html[data-theme="dark"] .bigcard>h3{text-shadow:0 1px 3px rgba(0,0,0,.55)}
+html[data-theme="dark"] .card h2,html[data-theme="dark"] .section h2,html[data-theme="dark"] .bigcard h2,html[data-theme="dark"] .card h3,html[data-theme="dark"] .section h3,html[data-theme="dark"] .bigcard h3{text-shadow:0 1px 3px rgba(0,0,0,.55)}
 html[data-theme="dark"] .net,html[data-theme="dark"] .netcard2,html[data-theme="dark"] .v4card,html[data-theme="dark"] .daycard,html[data-theme="dark"] .sumcard,html[data-theme="dark"] .recipe-card{box-shadow:0 4px 14px rgba(0,0,0,.35)}
 html[data-theme="dark"] .tab,html[data-theme="dark"] .fbtn,html[data-theme="dark"] .stab{background:#1e293b;border-color:#475569;color:#e2e8f0}
 html[data-theme="dark"] .tab.on{color:#fff}
@@ -172,7 +172,7 @@ html[data-theme="dark"] .hstat{background:rgba(255,255,255,.06);border-color:rgb
 /* ---- Análisis v2: misma tipografía/espaciado que Estadísticas v4 ---- */
 body.analisis .card{padding:22px;margin-bottom:22px}
 body.analisis .card h2{font-size:24px}
-body.analisis .card>h3{font-size:24px}
+body.analisis .card h3{font-size:24px}
 body.analisis .tabs{gap:8px;margin:22px 0 18px}
 body.analisis .tab{font-size:12px;padding:0;border:none}
 body.analisis .subtabs{margin:14px 0}
