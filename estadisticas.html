@@ -733,7 +733,7 @@ function openChan(k){var d=window.DETAIL.chan[k];if(!d)return;window._mchan=k;
  var nets='';Object.keys(d.nets).forEach(function(net){var n=d.nets[net];nets+='<tr><td><b>'+net+'</b></td><td>'+(n.fol==null?'—':n.fol.toLocaleString())+'</td><td>'+(n.tot==null?'—':n.tot.toLocaleString())+'</td><td>'+(n.top?('🏆 '+n.top+' · <b>'+n.topv.toLocaleString()+'</b>'):'sin dato')+'</td></tr>';});
  var g=d.grow;var ghtml=g?('<p><b>🚀 El que más crece:</b> '+g.title+' ('+g.net+') · <b>'+g.views.toLocaleString()+'</b> vistas'+(g.delta==null?'':' · ▲ +'+g.delta.toLocaleString())+'</p>'):'';
  var pair='';if(g&&g.evo)pair='<div class="mlab">Evolución de ese video · vistas por lectura</div><div class="mchart"><canvas id="m-pair"></canvas></div><div id="m-pair-fb"></div>';
- else if(g&&g.pair&&g.delta)pair='<div class="mlab">Evolución de ese video · mañana 25 nov → tarde 25 nov</div>'<div class="mchart"><canvas id="m-pair"></canvas></div><div id="m-pair-fb"></div>';
+ else if(g&&g.pair&&g.delta)pair='<div class="mlab">Evolución de ese video · mañana 25 nov → tarde 25 nov</div>'+'<div class="mchart"><canvas id="m-pair"></canvas></div><div id="m-pair-fb"></div>';
  var h='<div class="mrow" style="--c:'+d.color+'">'+_mavatar(d)+'<div><h2 style="margin:0">'+d.emoji+' '+d.name+'</h2><div class="note">'+d.handle+' · '+d.verdict+'</div><div><b>'+d.fol_total.toLocaleString()+'</b> '+(d.fol_total===1?'seguidor':'seguidores')+' en total</div></div></div>'
   +'<div class="mlab">Cifras por red</div><table class="mtable"><tr><th>Red</th><th>Seg.</th><th>Vistas</th><th>Top</th></tr>'+nets+'</table>'
   +ghtml+pair
@@ -753,7 +753,7 @@ function mDrawFol(net,btn){var d=window.DETAIL.chan[window._mchan];if(!d)return;
 function openVideo(id,el){var v=window.DETAIL.video[id];if(!v)return;var d=window.DETAIL.chan[v.chan];
  var cover='';if(el){var c=el.querySelector('.vcover,.vcover-fb,.vthumb');if(c)cover=c.outerHTML.replace('class="vcover"','class="mcover"').replace('class="vcover-fb"','class="mcover"').replace('class="vthumb"','class="mcover"');}
  var pair='';if(v.evo)pair='<div class="msec m-evo"><div class="mlab">📈 Evolución · vistas por lectura</div><div class="mchart"><canvas id="m-vevo"></canvas></div><div id="m-vevo-fb"></div></div>';
- else if(v.pair)pair='<div class="msec m-evo"><div class="mlab">📈 Evolución · mañana 25 nov → tarde 25 nov</div>'<div class="mchart"><canvas id="m-pair"></canvas></div><div id="m-pair-fb"></div></div>';
+ else if(v.pair)pair='<div class="msec m-evo"><div class="mlab">📈 Evolución · mañana 25 nov → tarde 25 nov</div>'+'<div class="mchart"><canvas id="m-pair"></canvas></div><div id="m-pair-fb"></div></div>';
  var h='<div class="mrow" style="--c:'+d.color+'">'+_mavatar(d)+'<div><h2 style="margin:0">'+d.name+'</h2><div class="note">'+v.net+' · '+v.level+'</div></div></div>'
   +cover+'<h2 style="margin-top:6px">'+v.title+'</h2><p class="note">'+v.views+'</p>'
   +(v.why?'<div class="msec m-why"><div class="mlab">✅ Por qué pegó</div><p>'+v.why+'</p></div>':'')
