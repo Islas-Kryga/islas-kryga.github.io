@@ -71,8 +71,9 @@ footer{color:#3d4a5c;font-size:12px;margin-top:22px}
 .news{list-style:none;margin:0;padding:0}
 .news li{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:16px 18px;margin-bottom:14px;font-size:14.5px;display:flex;gap:10px;align-items:flex-start}
 .news-txt{flex:1;min-width:0}
-.news-bullets{margin:8px 0 2px;padding-left:18px}
-.news-bullets li{margin:4px 0;line-height:1.5}
+.news-bullets{margin:8px 0 2px;padding-left:0;list-style:none}
+.news .news-bullets li{display:block;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:8px 12px;margin-bottom:6px;line-height:1.5}
+html[data-theme="dark"] .news .news-bullets li{background:#0f172a;border-color:#334155}
 .news-ava img,.news-ava .mini-av-fb{width:28px;height:28px;border-radius:50%;object-fit:cover;flex:none;border:2px solid var(--c)}
 .news-ava .mini-av-fb{display:inline-flex;align-items:center;justify-content:center;background:var(--c);color:#fff;font-weight:800;font-size:13px}
 /* ---- Estadísticas v4: tipografía grande, aire, fotos, tablas ---- */
@@ -135,6 +136,7 @@ html[data-theme="dark"] .fbtn.on,html[data-theme="dark"] .stab.on{background:#e2
 html[data-theme="dark"] .net .lab,html[data-theme="dark"] .note,html[data-theme="dark"] .card h2 small,html[data-theme="dark"] .chcard .handle,html[data-theme="dark"] .chcard .verdict,html[data-theme="dark"] .chcard .nums span,html[data-theme="dark"] .bigcard p,html[data-theme="dark"] .section .sub,html[data-theme="dark"] .chhead .hd,html[data-theme="dark"] .chhead-lg .hd,html[data-theme="dark"] footer,html[data-theme="dark"] .pill span,html[data-theme="dark"] header p,html[data-theme="dark"] .hstat span{color:#cbd5e1}
 html[data-theme="dark"] .net .trend{color:#4ade80}
 html[data-theme="dark"] .bar-row .tr,html[data-theme="dark"] .prog .tr{background:#334155}
+html[data-theme="dark"] .prog .fl{background:color-mix(in srgb, var(--c,#16a34a) 55%, #fff)}
 html[data-theme="dark"] .minitable th{color:#cbd5e1;border-color:#334155}
 html[data-theme="dark"] .minitable td{border-color:#1e293b}
 html[data-theme="dark"] .hbar{background:#334155}
@@ -425,6 +427,10 @@ html[data-theme="dark"] .tip-count{color:#cbd5e1}
 .mex-n{flex:none;width:22px;height:22px;border-radius:50%;background:#101828;color:#fff;font-size:12px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;margin-top:1px}
 .mex-src{font-size:12px;color:#3d4a5c;font-weight:600;margin-top:2px}
 html[data-theme="dark"] .mex-src{color:#cbd5e1}
+.vnav{display:flex;gap:10px;margin-top:16px}
+.vnav button{flex:1;padding:11px 12px;border-radius:10px;border:1px solid #e2e8f0;background:#f8fafc;font-weight:700;font-size:13.5px;cursor:pointer;color:#101828}
+.vnav button:disabled{opacity:.45;cursor:default}
+html[data-theme="dark"] .vnav button{background:#0f172a;border-color:#334155;color:#e2e8f0}
 .modal-panel h2{margin:0 0 4px;font-size:20px}
 .modal-panel .mrow{display:flex;gap:10px;align-items:center;margin:10px 0}
 .modal-panel .mrow img{width:56px;height:56px;border-radius:50%;object-fit:cover;border:3px solid var(--c,#888)}
@@ -497,7 +503,8 @@ body.monet .card h2{font-size:24px}
 .netcard .why.fix b{color:#b45309}
 .vcount{margin-top:12px;font-size:14px;font-weight:700}
 .prox-div{border-top:1px dashed var(--c,#e2e8f0);margin:12px 0 0}
-html[data-theme="dark"] .prox-div{border-color:var(--c,#334155)}
+html[data-theme="dark"] .prox-div{border-color:color-mix(in srgb, var(--c,#334155) 55%, #fff)}
+html[data-theme="dark"] .v4card{border-top-color:color-mix(in srgb, var(--c,#64748b) 55%, #fff)}
 .netcard .vthumb{width:auto;max-width:100%;height:150px;object-fit:contain;background:#101828;display:block;margin:0 auto}
 .netcard .vthumb-fb{width:100%;height:150px;min-height:150px}
 .dhead{text-align:center;border:1px solid #e2e8f0;border-radius:12px;padding:8px 4px;background:#fff;margin-bottom:10px}
@@ -528,7 +535,8 @@ html[data-theme="dark"] .netcard .nsec .vv{color:#cbd5e1}
 .mfield .mex-n{background:var(--c,#101828)}
 .mfield.f-no .mex-n{background:#dc2626}
 html[data-theme="dark"] .msec.m-why,html[data-theme="dark"] .msec.m-lack,html[data-theme="dark"] .msec.m-fix,html[data-theme="dark"] .msec.m-hook,html[data-theme="dark"] .msec.m-evo{background:#0f172a;border:1px solid #334155;border-left:3px solid #64748b}
-html[data-theme="dark"] .mfield.f-tema,html[data-theme="dark"] .mfield.f-gancho,html[data-theme="dark"] .mfield.f-formato,html[data-theme="dark"] .mfield.f-dur,html[data-theme="dark"] .mfield.f-red{background:#0f172a;border:1px solid #334155;border-left:3px solid var(--c,#64748b)}
+html[data-theme="dark"] .mfield.f-tema,html[data-theme="dark"] .mfield.f-gancho,html[data-theme="dark"] .mfield.f-formato,html[data-theme="dark"] .mfield.f-dur,html[data-theme="dark"] .mfield.f-red{background:#0f172a;border:1px solid #334155;border-left:3px solid color-mix(in srgb, var(--c,#64748b) 55%, #fff)}
+html[data-theme="dark"] .mfield .mex-n{background:color-mix(in srgb, var(--c,#101828) 55%, #fff)}
 html[data-theme="dark"] .mfield.f-no{background:rgba(220,38,38,.12);border:1px solid rgba(220,38,38,.45);border-left:3px solid #f87171}
 html[data-theme="dark"] .mfield.f-no .mlab{color:#fca5a5}
 html[data-theme="dark"] .mfield.f-no .mex-n{background:#dc2626}
@@ -572,8 +580,8 @@ html[data-theme="dark"] .formula-box .f-ex .f-views{color:#cbd5e1}
 .ev-list li{margin:4px 0;line-height:1.45}
 .ev-list .ev-net svg{vertical-align:-2px;margin-right:3px}
 </style><script>try{var t=localStorage.getItem('theme');if(!t)t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}</script></head><body>
-<header class="cover-head"><div class="wrap"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar entre modo claro y oscuro">🌙 Oscuro</button><h1>📺 Canales de Julio — Estadísticas y Análisis</h1>
-<p class="lede">El panel de los 8 canales de Julio en <span class="net-inline" style="color:#E1306C"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg></span> Instagram, <span class="net-inline" style="color:#1877F2"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8V11H8v3h2.5v7h3z" fill="currentColor"/></svg></span> Facebook, <span class="net-inline" style="color:#FF0000"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor"/><path d="M10 9.5v5l4.5-2.5z" fill="#fff"/></svg></span> YouTube y <span class="net-inline" style="color:#6b7280"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M12 6.5A5.5 5.5 0 1 0 17.5 12 5.5 5.5 0 0 0 12 6.5zm0 9A3.5 3.5 0 1 1 15.5 12 3.5 3.5 0 0 1 12 15.5z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M17.5 12v3.5a2 2 0 0 0 4 0" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span> Threads: qué está pasando con cada video, cuál pegó, cuál no, qué se puede mejorar y cuánto paga cada red. Se actualiza dos veces al día, en la mañana y en la noche.</p>
+<header class="cover-head"><div class="wrap"><button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar entre modo claro y oscuro">🌙 Oscuro</button><h1>📺 Canales — Estadísticas y Análisis</h1>
+<p class="lede">El panel de los 8 canales en <span class="net-inline" style="color:#E1306C"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg></span> Instagram, <span class="net-inline" style="color:#1877F2"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8V11H8v3h2.5v7h3z" fill="currentColor"/></svg></span> Facebook, <span class="net-inline" style="color:#FF0000"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor"/><path d="M10 9.5v5l4.5-2.5z" fill="#fff"/></svg></span> YouTube y <span class="net-inline" style="color:#6b7280"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M12 6.5A5.5 5.5 0 1 0 17.5 12 5.5 5.5 0 0 0 12 6.5zm0 9A3.5 3.5 0 1 1 15.5 12 3.5 3.5 0 0 1 12 15.5z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M17.5 12v3.5a2 2 0 0 0 4 0" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span> Threads: qué está pasando con cada video, cuál pegó, cuál no, qué se puede mejorar y cuánto paga cada red. Se actualiza dos veces al día, en la mañana y en la noche.</p>
 <div class="herostats">
 <div class="hstat"><b>📺 8</b><span>canales</span></div>
 <div class="hstat"><span class="hlogos"><span style="color:#E1306C"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg></span><span style="color:#1877F2"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8V11H8v3h2.5v7h3z" fill="currentColor"/></svg></span><span style="color:#FF0000"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor"/><path d="M10 9.5v5l4.5-2.5z" fill="#fff"/></svg></span><span style="color:#6b7280"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M12 6.5A5.5 5.5 0 1 0 17.5 12 5.5 5.5 0 0 0 12 6.5zm0 9A3.5 3.5 0 1 1 15.5 12 3.5 3.5 0 0 1 12 15.5z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M17.5 12v3.5a2 2 0 0 0 4 0" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span></span><span>redes</span></div>

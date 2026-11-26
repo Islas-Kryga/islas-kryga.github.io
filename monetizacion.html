@@ -71,8 +71,9 @@ footer{color:#3d4a5c;font-size:12px;margin-top:22px}
 .news{list-style:none;margin:0;padding:0}
 .news li{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:16px 18px;margin-bottom:14px;font-size:14.5px;display:flex;gap:10px;align-items:flex-start}
 .news-txt{flex:1;min-width:0}
-.news-bullets{margin:8px 0 2px;padding-left:18px}
-.news-bullets li{margin:4px 0;line-height:1.5}
+.news-bullets{margin:8px 0 2px;padding-left:0;list-style:none}
+.news .news-bullets li{display:block;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:8px 12px;margin-bottom:6px;line-height:1.5}
+html[data-theme="dark"] .news .news-bullets li{background:#0f172a;border-color:#334155}
 .news-ava img,.news-ava .mini-av-fb{width:28px;height:28px;border-radius:50%;object-fit:cover;flex:none;border:2px solid var(--c)}
 .news-ava .mini-av-fb{display:inline-flex;align-items:center;justify-content:center;background:var(--c);color:#fff;font-weight:800;font-size:13px}
 /* ---- Estadísticas v4: tipografía grande, aire, fotos, tablas ---- */
@@ -135,6 +136,7 @@ html[data-theme="dark"] .fbtn.on,html[data-theme="dark"] .stab.on{background:#e2
 html[data-theme="dark"] .net .lab,html[data-theme="dark"] .note,html[data-theme="dark"] .card h2 small,html[data-theme="dark"] .chcard .handle,html[data-theme="dark"] .chcard .verdict,html[data-theme="dark"] .chcard .nums span,html[data-theme="dark"] .bigcard p,html[data-theme="dark"] .section .sub,html[data-theme="dark"] .chhead .hd,html[data-theme="dark"] .chhead-lg .hd,html[data-theme="dark"] footer,html[data-theme="dark"] .pill span,html[data-theme="dark"] header p,html[data-theme="dark"] .hstat span{color:#cbd5e1}
 html[data-theme="dark"] .net .trend{color:#4ade80}
 html[data-theme="dark"] .bar-row .tr,html[data-theme="dark"] .prog .tr{background:#334155}
+html[data-theme="dark"] .prog .fl{background:color-mix(in srgb, var(--c,#16a34a) 55%, #fff)}
 html[data-theme="dark"] .minitable th{color:#cbd5e1;border-color:#334155}
 html[data-theme="dark"] .minitable td{border-color:#1e293b}
 html[data-theme="dark"] .hbar{background:#334155}
@@ -425,6 +427,10 @@ html[data-theme="dark"] .tip-count{color:#cbd5e1}
 .mex-n{flex:none;width:22px;height:22px;border-radius:50%;background:#101828;color:#fff;font-size:12px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;margin-top:1px}
 .mex-src{font-size:12px;color:#3d4a5c;font-weight:600;margin-top:2px}
 html[data-theme="dark"] .mex-src{color:#cbd5e1}
+.vnav{display:flex;gap:10px;margin-top:16px}
+.vnav button{flex:1;padding:11px 12px;border-radius:10px;border:1px solid #e2e8f0;background:#f8fafc;font-weight:700;font-size:13.5px;cursor:pointer;color:#101828}
+.vnav button:disabled{opacity:.45;cursor:default}
+html[data-theme="dark"] .vnav button{background:#0f172a;border-color:#334155;color:#e2e8f0}
 .modal-panel h2{margin:0 0 4px;font-size:20px}
 .modal-panel .mrow{display:flex;gap:10px;align-items:center;margin:10px 0}
 .modal-panel .mrow img{width:56px;height:56px;border-radius:50%;object-fit:cover;border:3px solid var(--c,#888)}
@@ -497,7 +503,8 @@ body.monet .card h2{font-size:24px}
 .netcard .why.fix b{color:#b45309}
 .vcount{margin-top:12px;font-size:14px;font-weight:700}
 .prox-div{border-top:1px dashed var(--c,#e2e8f0);margin:12px 0 0}
-html[data-theme="dark"] .prox-div{border-color:var(--c,#334155)}
+html[data-theme="dark"] .prox-div{border-color:color-mix(in srgb, var(--c,#334155) 55%, #fff)}
+html[data-theme="dark"] .v4card{border-top-color:color-mix(in srgb, var(--c,#64748b) 55%, #fff)}
 .netcard .vthumb{width:auto;max-width:100%;height:150px;object-fit:contain;background:#101828;display:block;margin:0 auto}
 .netcard .vthumb-fb{width:100%;height:150px;min-height:150px}
 .dhead{text-align:center;border:1px solid #e2e8f0;border-radius:12px;padding:8px 4px;background:#fff;margin-bottom:10px}
@@ -528,7 +535,8 @@ html[data-theme="dark"] .netcard .nsec .vv{color:#cbd5e1}
 .mfield .mex-n{background:var(--c,#101828)}
 .mfield.f-no .mex-n{background:#dc2626}
 html[data-theme="dark"] .msec.m-why,html[data-theme="dark"] .msec.m-lack,html[data-theme="dark"] .msec.m-fix,html[data-theme="dark"] .msec.m-hook,html[data-theme="dark"] .msec.m-evo{background:#0f172a;border:1px solid #334155;border-left:3px solid #64748b}
-html[data-theme="dark"] .mfield.f-tema,html[data-theme="dark"] .mfield.f-gancho,html[data-theme="dark"] .mfield.f-formato,html[data-theme="dark"] .mfield.f-dur,html[data-theme="dark"] .mfield.f-red{background:#0f172a;border:1px solid #334155;border-left:3px solid var(--c,#64748b)}
+html[data-theme="dark"] .mfield.f-tema,html[data-theme="dark"] .mfield.f-gancho,html[data-theme="dark"] .mfield.f-formato,html[data-theme="dark"] .mfield.f-dur,html[data-theme="dark"] .mfield.f-red{background:#0f172a;border:1px solid #334155;border-left:3px solid color-mix(in srgb, var(--c,#64748b) 55%, #fff)}
+html[data-theme="dark"] .mfield .mex-n{background:color-mix(in srgb, var(--c,#101828) 55%, #fff)}
 html[data-theme="dark"] .mfield.f-no{background:rgba(220,38,38,.12);border:1px solid rgba(220,38,38,.45);border-left:3px solid #f87171}
 html[data-theme="dark"] .mfield.f-no .mlab{color:#fca5a5}
 html[data-theme="dark"] .mfield.f-no .mex-n{background:#dc2626}
@@ -664,8 +672,11 @@ function mDrawEvoBtn(b){mDrawEvo(b.getAttribute('data-net'),b);}
 function mDrawFolBtn(b){mDrawFol(b.getAttribute('data-net'),b);}
 function mDrawEvo(net,btn){var d=window.DETAIL.chan[window._mchan];if(!d)return;if(btn){btn.parentElement.querySelectorAll('.fbtn').forEach(function(b){b.classList.remove('on');});btn.classList.add('on');}_mline('m-evo',d.evo.labels,d.evo[net],d.color);}
 function mDrawFol(net,btn){var d=window.DETAIL.chan[window._mchan];if(!d)return;if(btn){btn.parentElement.querySelectorAll('.fbtn').forEach(function(b){b.classList.remove('on');});btn.classList.add('on');}var vals=d.fol[net];document.getElementById('m-fol-note').textContent=_folNote(vals);_mline('m-fol',d.fol.labels,vals,d.color);}
+function _vcoverFor(id){var els=document.querySelectorAll('[onclick*="openVideo(' + "'" + id + "'" + '"]');for(var i=0;i<els.length;i++){var c=els[i].querySelector('.vcover,.vcover-fb,.vthumb,.vthumb-av-slot');if(c)return c.outerHTML.replace('class="vcover"','class="mcover"').replace('class="vcover-fb"','class="mcover"').replace('class="vthumb"','class="mcover"').replace('class="vthumb-av-slot"','class="mcover-av-slot"');}return '';}
+function _vnav(id,v){var best=null,worst=null;Object.keys(window.DETAIL.video).forEach(function(k){var x=window.DETAIL.video[k];if(x.chan===v.chan&&x.net===v.net){if((x.level||'').indexOf('🥇')===0)best=k;if((x.level||'').indexOf('🔻')===0)worst=k;}});if(!best||!worst)return '';return '<div class="vnav"><button'+(id===best?' disabled':'')+' onclick="openVideo(' + "'" + best + "'" + ',this)">‹ 🏆 El que más pegó</button><button'+(id===worst?' disabled':'')+' onclick="openVideo(' + "'" + worst + "'" + ',this)">🔻 El que menos pegó ›</button></div>';}
 function openVideo(id,el){var v=window.DETAIL.video[id];if(!v)return;var d=window.DETAIL.chan[v.chan];
  var cover='';if(el){var c=el.querySelector('.vcover,.vcover-fb,.vthumb,.vthumb-av-slot');if(c)cover=c.outerHTML.replace('class="vcover"','class="mcover"').replace('class="vcover-fb"','class="mcover"').replace('class="vthumb"','class="mcover"').replace('class="vthumb-av-slot"','class="mcover-av-slot"');}
+ if(!cover)cover=_vcoverFor(id);
  var pair='';if(v.evo)pair='<div class="msec m-evo"><div class="mlab">📈 Evolución · vistas por lectura</div><div class="mchart"><canvas id="m-vevo"></canvas></div><div id="m-vevo-fb"></div></div>';
  else if(v.pair)pair='<div class="msec m-evo"><div class="mlab">📈 Evolución · mañana 25 nov → tarde 25 nov</div>'+'<div class="mchart"><canvas id="m-pair"></canvas></div><div id="m-pair-fb"></div></div>';
  var h='<div class="mrow" style="--c:'+d.color+'">'+_mavatar(d)+'<div><h2 style="margin:0">'+d.name+'</h2><div class="note">'+v.net+' · '+v.level+'</div></div></div>'
@@ -673,8 +684,8 @@ function openVideo(id,el){var v=window.DETAIL.video[id];if(!v)return;var d=windo
   +(v.why?'<div class="msec m-why"><div class="mlab">✅ Por qué pegó</div><p>'+v.why+'</p></div>':'')
   +(v.lacked?'<div class="msec m-lack"><div class="mlab">⚠️ Le faltó</div><p>'+v.lacked+'</p></div>':'')
   +(v.improve?'<div class="msec m-fix"><div class="mlab">🔧 ¿Cómo se mejora?</div><p>'+v.improve+'</p></div>':'')
-  +(v.hook&&v.hook!=='—'?'<div class="msec m-hook"><div class="mlab">🆕 Nuevo texto</div><p>'+v.hook+'</p></div>':'')+pair;
- _mopen(h);if(v.evo)_mline('m-vevo',v.evo.labels,v.evo.values,d.color);else if(v.pair)_mline('m-pair',['mañana 25 nov','tarde 25 nov'],v.pair,d.color);}
+  +(v.hook&&v.hook!=='—'?'<div class="msec m-hook"><div class="mlab">🆕 Nuevo texto</div><p>'+v.hook+'</p></div>':'')+pair+_vnav(id,v);
+ _mopen(h);var mp=document.getElementById('modal-panel');if(mp)mp.scrollTop=0;if(v.evo)_mline('m-vevo',v.evo.labels,v.evo.values,d.color);else if(v.pair)_mline('m-pair',['mañana 25 nov','tarde 25 nov'],v.pair,d.color);}
 function openCal(id){var c=window.DETAIL.cal[id];if(!c)return;var d=window.DETAIL.chan[c.chan];
  var h='<div class="mrow" style="--c:'+d.color+'">'+_mavatar(d)+'<div><h2 style="margin:0">'+d.name+'</h2><div class="note">'+c.day+' · 🕐 '+c.hora+'</div></div></div>'
   +(c.cover?'<img class="mcover" src="'+c.cover+'" alt="">':'')
